@@ -1,0 +1,19 @@
+// sass --watch ./src/main.scss ./public/main.css
+
+@import "components/navbar";
+@import "components/buttons";
+@import "components/title";
+
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+#textgradient {
+    background: rgb(199,248,0);
+    background: linear-gradient(153deg, rgba(199,248,0,1) 0%, rgb(61, 178, 11) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }

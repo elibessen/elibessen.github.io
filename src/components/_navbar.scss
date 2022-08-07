@@ -1,0 +1,56 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    .nav-item{
+        a{
+            color: black;
+        }
+        a:hover{
+            cursor: pointer;
+            color: rgb(133, 133, 133);
+        }
+    }
+}
+
+.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    gap: 1rem;
+}
+
+.nav-brand{
+    padding-left: 1rem;
+    display: inline;
+    float: left;
+    a{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 650;
+    }
+}
+
+.nav-item{
+    display: inline;
+    flex-grow: 1;
+    flex-basis: 0;
+    // Styling anchor tag within any nav item
+    a{
+        float: left;
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
+        font-size: 1rem;
+        display: block;
+        padding: 1.3rem 1.3rem;
+    }
+}

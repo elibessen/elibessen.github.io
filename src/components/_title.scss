@@ -1,18 +1,85 @@
+#textgradient {
+    background: rgb(199,248,0);
+    background: linear-gradient(153deg, rgba(199,248,0,1) 0%, rgb(61, 178, 11) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#titlecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3rem;
+    padding-top: 25vh;
+    height: 75vh;
+}
+
 #title{
-    padding-top: 20vh;
+    color: rgb(24, 30, 26);
     h1{
-        text-align: center; 
-        font-size: 5rem; 
+        font-size: 6rem; 
         display: flex; 
         flex-direction: row; 
-        gap: 1rem; 
         padding: 0;
         margin: 0;
+        gap: 1rem;
     }
     p{
-        text-align: center; 
-        font-weight: 500; 
+        font-weight: 400; 
         font-size: 1.5rem;
         padding: 0.2rem;
+        max-width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1121px) {
+    #titlecontainer{
+        justify-content: center;
+        margin-left: 0rem;
+        padding-top: 10vh;
+        height: 85vh;
+    }
+    #title{
+        flex-direction: column;
+        h1{
+            flex-direction: column;
+        }
+        p{
+            text-align: center;
+            font-weight: 500; 
+            font-size: 1.5rem;
+            display: inline-block;
+        }
+    }
+    .navbar{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #title{
+        h1{
+            font-size: 5rem; 
+        }
+        p{
+            text-align: center;
+            font-weight: 500; 
+            font-size: 1rem;
+            display: inline-block;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #titlecontainer{
+        justify-content: center;
+        margin-left: 0rem;
+        padding-top: 20vh;
+        height: 85vh;
+    }
+    #title{
+        h1{
+            font-size: 4rem; 
+        }
     }
 }

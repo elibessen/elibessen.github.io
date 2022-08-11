@@ -1,0 +1,347 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-bottom: 0.5px solid #cdcdcd;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.navbar .nav-item a {
+  color: black;
+}
+.navbar .nav-item a:hover {
+  cursor: pointer;
+  color: #858585;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: sticky;
+  gap: 1rem;
+}
+
+.nav-brand {
+  padding-left: 4rem;
+  display: inline;
+  float: left;
+}
+.nav-brand a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 650;
+}
+
+.nav-item {
+  display: inline;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.nav-item a {
+  float: left;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  padding: 1.3rem 1.3rem;
+}
+
+.button {
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+}
+.button-primary {
+  background-color: #b7ff00;
+  color: white;
+}
+
+#textgradient {
+  background: #c7f800;
+  background: linear-gradient(153deg, #c7f800 0%, #3db20b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#titlecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 3rem;
+  padding-top: 25vh;
+  height: 75vh;
+}
+
+#title {
+  color: #181e1a;
+}
+#title h1 {
+  font-size: 6rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+#title p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  max-width: fit-content;
+}
+
+@media only screen and (max-width: 1121px) {
+  #titlecontainer {
+    justify-content: center;
+    margin-left: 0rem;
+    padding-top: 10vh;
+    height: 85vh;
+  }
+
+  #title {
+    flex-direction: column;
+  }
+  #title h1 {
+    flex-direction: column;
+  }
+  #title p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #title h1 {
+    font-size: 5rem;
+  }
+  #title p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #titlecontainer {
+    justify-content: center;
+    margin-left: 0rem;
+    padding-top: 20vh;
+    height: 85vh;
+  }
+
+  #title h1 {
+    font-size: 4rem;
+  }
+}
+#contactcontainer {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  padding-top: 10rem;
+}
+#contactcontainer h1 {
+  font-size: 4.5rem;
+  margin: 0;
+}
+#contactcontainer p {
+  padding: 0;
+  font-size: 1.5rem;
+}
+#contactcontainer h5 {
+  font-size: 1.2rem;
+}
+
+#contactbutton {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: #41d028;
+  color: white;
+  font-weight: 600;
+  transition: 0.5s;
+}
+#contactbutton:hover {
+  cursor: pointer;
+  background-color: #24ac0c;
+}
+
+#projectcontainer {
+  margin-left: 3rem;
+  margin-bottom: 10rem;
+}
+#projectcontainer h1 {
+  font-size: 4.5rem;
+  margin: 0;
+}
+#projectcontainer p {
+  padding: 0;
+}
+
+.grid {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  order: 2;
+}
+
+.card {
+  z-index: 1;
+  background-color: white;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card:hover,
+.card:focus {
+  color: #52911e;
+  border-color: #41ad16;
+}
+
+.card:active {
+  color: #187723;
+}
+
+@media only screen and (max-width: 1121px) {
+  #projectcontainer {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+  #projectcontainer h1 {
+    font-size: 4.5rem;
+    margin: 0;
+  }
+  #projectcontainer p {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #projectcontainer {
+    margin-left: 0rem;
+    text-align: center;
+  }
+  #projectcontainer h1 {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+  #projectcontainer p {
+    padding: 0;
+  }
+}
+footer {
+  position: absolute;
+  height: auto;
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+
+.footer-content {
+  padding-top: 5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem;
+  padding: 0;
+}
+.footer-content h5 {
+  color: grey;
+  max-width: 500px;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+.footer-content p {
+  color: grey;
+  max-width: 500px;
+  font-size: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+#aboutcontainer {
+  margin-left: 3rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+#aboutcontainer h1 {
+  font-size: 4.5rem;
+  margin: 0;
+}
+#aboutcontainer h3 {
+  font-size: 1.5rem;
+  padding: 0;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1121px) {
+  #aboutcontainer {
+    justify-content: center;
+    margin-left: 0rem;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+  }
+  #aboutcontainer h1 {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+  #aboutcontainer h3 {
+    padding: 0;
+  }
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#bottomcontainer {
+  padding-bottom: 10rem;
+}
+
+/*# sourceMappingURL=main.css.map */

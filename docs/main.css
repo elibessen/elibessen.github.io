@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  flex-wrap: wrap;
   background-color: white;
   border-bottom: 0.5px solid #cdcdcd;
   position: fixed;
@@ -47,14 +46,34 @@
 .nav-item a {
   float: left;
   text-decoration: none;
-  text-align: center;
-  justify-content: center;
   font-size: 1rem;
   font-weight: 500;
   display: block;
   padding: 1.3rem 1.3rem;
 }
 
+@media only screen and (max-width: 1121px) {
+  .nav-brand {
+    padding-left: 0;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .nav-brand {
+    padding-left: 0rem;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+  }
+}
 .button {
   padding: 2rem 2rem;
   border-radius: 1rem;
@@ -124,6 +143,11 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  #titlecontainer {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
   #title h1 {
     font-size: 5rem;
   }
@@ -144,6 +168,18 @@
 
   #title h1 {
     font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #titlecontainer {
+    justify-content: center;
+    margin-left: 0rem;
+    padding-top: 20vh;
+    height: 85vh;
+  }
+
+  #title h1 {
+    font-size: 2.5rem;
   }
 }
 #contactcontainer {

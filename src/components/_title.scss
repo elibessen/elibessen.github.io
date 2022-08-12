@@ -57,6 +57,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+    #titlecontainer{
+        padding-left: 0;
+        margin-left: 0;
+    }
     #title{
         h1{
             font-size: 5rem; 
@@ -80,6 +84,21 @@
     #title{
         h1{
             font-size: 4rem; 
+        }
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    #titlecontainer{
+        justify-content: center;
+        margin-left: 0rem;
+        padding-top: 20vh;
+        height: 85vh;
+    }
+    #title{
+        h1{
+            font-size: 2.5rem; 
         }
     }
 }

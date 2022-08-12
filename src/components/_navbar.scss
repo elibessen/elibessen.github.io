@@ -1,6 +1,5 @@
 .navbar{
     display: flex;
-    flex-wrap: wrap;
     background-color: white;
     border-bottom: 0.5px solid rgb(205, 205, 205);
     position: fixed;
@@ -49,11 +48,30 @@
     a{
         float: left;
         text-decoration: none;
-        text-align: center;
-        justify-content: center;
         font-size: 1rem;
         font-weight: 500;
         display: block;
         padding: 1.3rem 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 1121px){
+    .nav-brand{
+        padding-left: 0;
+    }
+    .navbar{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .nav-brand{
+        padding-left: 0rem;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-wrap: nowrap;
     }
 }

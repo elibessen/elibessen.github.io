@@ -15,26 +15,29 @@
     gap: 1rem;
     margin-top: 3.5rem;
     order: 2;
+    width: 50rem;
 }
 
 .card {
-    z-index: 1;
     background-color: white;
     flex-basis: 45%;
     padding: 1.5rem;
     text-align: left;
     text-decoration: none;
-    border: 1px solid #eaeaea;
+    border: 1px solid #777777;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+    color: black;
     p{
         margin: 0;
         font-size: 1.25rem;
         line-height: 1.5;
+        width: fit-content;
     }
     h3{
-        margin: 0 0 1rem 0;
+        margin: 0;
         font-size: 1.5rem;
+        width: fit-content;
     }
 }
 
@@ -52,8 +55,9 @@
     #projectcontainer{
         text-align: center;
         margin-bottom: 10rem;
+        margin-left: 0;
         h1{
-            font-size: 4.5rem;
+            padding-left: 0;
             margin: 0;
         }
         p{

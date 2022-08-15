@@ -6,6 +6,7 @@
     h1{
         font-size: 4.5rem;
         margin: 0;
+        padding-top: 6rem;
     }
     h3{
         font-size: 1.5rem;
@@ -14,11 +15,22 @@
     }
 }
 
+#specialties{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    div{
+        img{
+            width: 2rem;
+        }
+    }
+}
+
 @media only screen and (max-width: 1121px){
     #aboutcontainer{
         justify-content: center;
         margin-left: 0rem;
-        text-align: center;
+        text-align: center; 
         align-items: center;
         align-self: center;
         h1{

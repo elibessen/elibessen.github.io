@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   background-color: white;
-  border-bottom: 0.5px solid #cdcdcd;
+  border-bottom: 0.5px solid rgb(205, 205, 205);
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -11,7 +11,7 @@
 }
 .navbar .nav-item a:hover {
   cursor: pointer;
-  color: #858585;
+  color: rgb(133, 133, 133);
 }
 
 .nav {
@@ -56,7 +56,6 @@
   .nav-brand {
     padding-left: 0;
   }
-
   .navbar {
     flex-wrap: wrap;
   }
@@ -65,11 +64,9 @@
   .nav-brand {
     padding-left: 0rem;
   }
-
   .nav {
     flex-direction: column;
   }
-
   .navbar {
     flex-wrap: nowrap;
   }
@@ -79,13 +76,13 @@
   border-radius: 1rem;
 }
 .button-primary {
-  background-color: #b7ff00;
+  background-color: rgb(183, 255, 0);
   color: white;
 }
 
 #textgradient {
-  background: #c7f800;
-  background: linear-gradient(153deg, #c7f800 0%, #3db20b 100%);
+  background: rgb(199, 248, 0);
+  background: linear-gradient(153deg, rgb(199, 248, 0) 0%, rgb(61, 178, 11) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -100,7 +97,7 @@
 }
 
 #title {
-  color: #181e1a;
+  color: rgb(24, 30, 26);
 }
 #title h1 {
   font-size: 6rem;
@@ -124,7 +121,6 @@
     padding-top: 10vh;
     height: 85vh;
   }
-
   #title {
     flex-direction: column;
   }
@@ -137,7 +133,6 @@
     font-size: 1.5rem;
     display: inline-block;
   }
-
   .navbar {
     justify-content: center;
   }
@@ -147,7 +142,6 @@
     padding-left: 0;
     margin-left: 0;
   }
-
   #title h1 {
     font-size: 5rem;
   }
@@ -165,7 +159,6 @@
     padding-top: 20vh;
     height: 85vh;
   }
-
   #title h1 {
     font-size: 4rem;
   }
@@ -177,7 +170,6 @@
     padding-top: 20vh;
     height: 85vh;
   }
-
   #title h1 {
     font-size: 2.5rem;
   }
@@ -207,14 +199,14 @@
   padding: 0.7rem;
   border-radius: 0.3rem;
   border: none;
-  background-color: #41d028;
+  background-color: rgb(65, 208, 40);
   color: white;
   font-weight: 600;
   transition: 0.5s;
 }
 #contactbutton:hover {
   cursor: pointer;
-  background-color: #24ac0c;
+  background-color: rgb(36, 172, 12);
 }
 
 #projectcontainer {
@@ -234,7 +226,6 @@
   gap: 1rem;
   margin-top: 3.5rem;
   order: 2;
-  width: 50rem;
 }
 
 .card {
@@ -289,7 +280,6 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-
   #projectcontainer {
     margin-left: 0rem;
     text-align: center;
@@ -306,9 +296,8 @@ footer {
   position: absolute;
   height: auto;
   width: 100vw;
-  color: black;
-  background-color: white;
-  border-top: 0.5px solid #e6e6e6;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 .footer-content {
@@ -363,7 +352,10 @@ footer {
   flex-direction: row;
   gap: 1rem;
 }
-#specialties div img {
+#specialties div a:hover {
+  cursor: pointer;
+}
+#specialties div a img {
   width: 2rem;
 }
 
@@ -393,7 +385,7 @@ html, body {
 
 #bottomcontainer {
   padding-bottom: 10rem;
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
 }
 
 /* width */

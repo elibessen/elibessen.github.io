@@ -1,0 +1,40 @@
+head
+  title Eli Bessen
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='main.css')
+  // <link rel="icon" type="image/x-icon" href="">
+#page
+  #content
+    nav.navbar
+      ul.nav
+        li.nav-brand
+          a(style='display: flex; ')
+            p Eli
+            p(style='color: rgb(144, 220, 12);') Bessen
+        li.nav-item
+          a(href='index.html') Home
+        li.nav-item
+          a(href='index.html#projectcontainer') Projects
+        li.nav-item
+          a(href='index.html#contact') Contact
+          // <a href="#home">Contact</a>
+    #page(style='text-align: center;')
+      #content(style='display: flex; flex-direction: column;')
+        #contactcontainer
+          h1 What&apos;s on your mind?
+          p If you have an app or website in mind feel free to get in touch.
+          div(style='display: flex; flex-direction: row; gap: 0.4rem; text-align: center;')
+            h5(style='font-weight: 600; margin: 0.5rem;') Reply time:
+            h5(style='margin: 0.5rem;') 1-2 Business Days
+      div(style='margin-top: 2rem;')
+        button#contactbutton
+          a(href='mailto: ebessen@internode.on.net' style='text-decoration: none; color: white;') ebessen@internode.on.net
+    div(style='display: flex; justify-content: center; text-align: center; padding-top: 10rem;')
+      p(style='padding-bottom: 2rem;')
+        | &copy; 2022 All rights reserved - Front-end developer and designer. Hand designed and coded by 
+        a(href='https://github.com/elibessen') Eli Bessen
+        | .
+
+
+//-pug -w src/contact.pug -o docs/ -P

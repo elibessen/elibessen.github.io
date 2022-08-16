@@ -1,0 +1,78 @@
+head
+  title Eli Bessen
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='main.css')
+  script(src='https://unpkg.com/boxicons@2.1.2/dist/boxicons.js')
+  // <link rel="icon" type="image/x-icon" href="">
+#page
+  #content
+    nav.navbar
+      ul.nav
+        li.nav-brand
+          a(style='display: flex; ')
+            p Eli
+            p(style='color: rgb(144, 220, 12);') Bessen
+        li.nav-item
+          a(href='#') Home
+        li.nav-item
+          a(href='#projectcontainer') Projects
+        li.nav-item
+          a(href='contact.html') Contact
+    #titlecontainer
+      div
+        #title
+          h1#oneline
+            | Australian 
+            #textgradient Front-end
+          h1 developer
+          p A front-end web developer and designer based in Australia.
+    #bottomcontainer
+      #aboutcontainer
+        div(style='width: 50vw;')
+          h1 Hey! I&apos;m Eli.
+          h3
+            | My name is Eli Bessen. I&apos;m currently a front-end developer and UI/UX designer from Australia, who dabbles in back-end development.
+          p
+            | Currently, I&apos;m a free lance developer looking to develop new and exciting applications. I also work with a group of young developers called 
+            a(href='https://github.com/Ambience-Studios' style='text-decoration: none; color: black; font-weight: 800;') Ambience Studios.
+        #specialties
+          div
+            a(href='https://firebase.google.com/')
+              img(src='./img/firebase.svg')
+          div
+            a(href='https://www.javascript.com/')
+              img(src='./img/js.svg')
+          div
+            a(href='https://sass-lang.com/')
+              img(src='./img/sass.svg')
+      #projectcontainer
+        h1 Projects
+        p What am I working on?
+        .grid
+          a.card(href='https://github.com/elibessen/foodbase')
+            h3 Foodbase
+            p
+              | A self-hostable food ordering system for Food Tech classes using Firebase Auth &amp; Firestore.
+          a.card(href='https://github.com/elibessen/the-helloworld-encyclopedia')
+            h3 The Helloworld Encyclopedia
+            p
+              | An encyclopedia of hello world code snippets in every single colour coded language.
+          a.card(href='https://github.com/elibessen/foodbase')
+            h3 Portfolio
+            p Just my Portfolio
+    #footer
+      footer
+        .footer-content
+          h3 Let&apos;s work together
+          h5
+            | If you have a website or app idea in mind feel free to 
+            a(style='text-decoration: none; font-weight: 800; color: rgb(144, 220, 12);' href='contact.html') contact me
+            | .
+          br
+          p(style='padding-bottom: 2rem;')
+            | &copy; 2022 All rights reserved - Front-end developer and designer. Hand designed and coded by 
+            a(href='https://github.com/elibessen') Eli Bessen
+            | .
+
+//-pug -w src/index.pug -o docs/ -P

@@ -20,8 +20,13 @@
     flex-direction: row;
     gap: 1rem;
     div{
-        img{
-            width: 2rem;
+        a{
+            &:hover{
+                cursor: pointer;
+            }
+            img{
+                width: 2rem;
+            }
         }
     }
 }

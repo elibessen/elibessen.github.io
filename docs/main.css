@@ -90,7 +90,6 @@
 #titlecontainer {
   display: flex;
   margin-left: 3rem;
-  padding-top: 25vh;
   height: 70vh;
 }
 
@@ -159,7 +158,6 @@
   #titlecontainer {
     justify-content: center;
     margin-left: 0rem;
-    padding-top: 5vh;
     height: 85vh;
   }
 
@@ -172,8 +170,8 @@
   #titlecontainer {
     justify-content: center;
     margin-left: 0rem;
-    padding-top: 20vh;
     height: 85vh;
+    padding-top: 5rem;
   }
 
   #title h1 {

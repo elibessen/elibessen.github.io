@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   background-color: white;
-  border-bottom: 0.5px solid rgb(205, 205, 205);
+  border-bottom: 0.5px solid #cdcdcd;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -11,7 +11,7 @@
 }
 .navbar .nav-item a:hover {
   cursor: pointer;
-  color: rgb(133, 133, 133);
+  color: #858585;
 }
 
 .nav {
@@ -56,6 +56,7 @@
   .nav-brand {
     padding-left: 0;
   }
+
   .navbar {
     flex-wrap: wrap;
   }
@@ -64,9 +65,11 @@
   .nav-brand {
     padding-left: 0rem;
   }
+
   .nav {
     flex-direction: column;
   }
+
   .navbar {
     flex-wrap: nowrap;
   }
@@ -76,13 +79,13 @@
   border-radius: 1rem;
 }
 .button-primary {
-  background-color: rgb(183, 255, 0);
+  background-color: #b7ff00;
   color: white;
 }
 
 #textgradient {
-  background: rgb(199, 248, 0);
-  background: linear-gradient(153deg, rgb(199, 248, 0) 0%, rgb(61, 178, 11) 100%);
+  background: #c7f800;
+  background: linear-gradient(153deg, #c7f800 0%, #3db20b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -97,7 +100,7 @@
 }
 
 #title {
-  color: rgb(24, 30, 26);
+  color: #181e1a;
 }
 #title h1 {
   font-size: 6rem;
@@ -121,6 +124,7 @@
     padding-top: 10vh;
     height: 85vh;
   }
+
   #title {
     flex-direction: column;
   }
@@ -133,6 +137,7 @@
     font-size: 1.5rem;
     display: inline-block;
   }
+
   .navbar {
     justify-content: center;
   }
@@ -142,6 +147,7 @@
     padding-left: 0;
     margin-left: 0;
   }
+
   #title h1 {
     font-size: 5rem;
   }
@@ -159,6 +165,7 @@
     padding-top: 20vh;
     height: 85vh;
   }
+
   #title h1 {
     font-size: 4rem;
   }
@@ -170,6 +177,7 @@
     padding-top: 20vh;
     height: 85vh;
   }
+
   #title h1 {
     font-size: 2.5rem;
   }
@@ -199,14 +207,14 @@
   padding: 0.7rem;
   border-radius: 0.3rem;
   border: none;
-  background-color: rgb(65, 208, 40);
+  background-color: #41d028;
   color: white;
   font-weight: 600;
   transition: 0.5s;
 }
 #contactbutton:hover {
   cursor: pointer;
-  background-color: rgb(36, 172, 12);
+  background-color: #24ac0c;
 }
 
 #projectcontainer {
@@ -221,11 +229,25 @@
   padding: 0;
 }
 
+#aligncenter {
+  display: flex;
+  align-items: center;
+}
+
+#cardinfo {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .grid {
   display: flex;
   gap: 1rem;
   margin-top: 3.5rem;
   order: 2;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 3rem;
 }
 
 .card {
@@ -256,12 +278,20 @@
   color: #52911e;
   border-color: #41ad16;
 }
+.card:hover svg,
+.card:focus svg {
+  fill: #52911e;
+}
 
 .card:active {
   color: #187723;
 }
 
 @media only screen and (max-width: 1121px) {
+  .grid {
+    margin-right: 0rem;
+  }
+
   #projectcontainer {
     text-align: center;
     margin-bottom: 10rem;
@@ -280,6 +310,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
   #projectcontainer {
     margin-left: 0rem;
     text-align: center;
@@ -296,8 +327,8 @@ footer {
   position: absolute;
   height: auto;
   width: 100vw;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  color: white;
+  background-color: black;
 }
 
 .footer-content {
@@ -334,12 +365,12 @@ footer {
   margin-left: 3rem;
   padding-bottom: 10rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding-top: 6rem;
 }
 #aboutcontainer h1 {
   font-size: 4.5rem;
   margin: 0;
-  padding-top: 6rem;
 }
 #aboutcontainer h3 {
   font-size: 1.5rem;
@@ -347,9 +378,15 @@ footer {
   font-weight: 500;
 }
 
+#abouttext {
+  display: flex;
+  flex-direction: column;
+}
+
 #specialties {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 #specialties div a:hover {
@@ -357,6 +394,11 @@ footer {
 }
 #specialties div a img {
   width: 2rem;
+}
+
+#socialmedias {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 1121px) {
@@ -374,7 +416,31 @@ footer {
   #aboutcontainer h3 {
     padding: 0;
   }
+
+  #specialties {
+    justify-content: center;
+  }
 }
+#workcontainer {
+  margin-left: 3rem;
+  margin-bottom: 20rem;
+  margin-top: 10rem;
+}
+#workcontainer h1 {
+  font-size: 4.5rem;
+  margin: 0;
+}
+#workcontainer p {
+  padding: 0;
+}
+#workcontainer h2 {
+  font-size: 2.5rem;
+}
+#workcontainer h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -385,7 +451,6 @@ html, body {
 
 #bottomcontainer {
   padding-bottom: 10rem;
-  background-color: rgb(240, 240, 240);
 }
 
 /* width */

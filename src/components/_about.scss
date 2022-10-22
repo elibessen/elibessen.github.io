@@ -2,11 +2,11 @@
     margin-left: 3rem;
     padding-bottom: 10rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding-top: 6rem;
     h1{
         font-size: 4.5rem;
         margin: 0;
-        padding-top: 6rem;
     }
     h3{
         font-size: 1.5rem;
@@ -15,9 +15,15 @@
     }
 }
 
+#abouttext{
+    display: flex;
+    flex-direction: column;
+}
+
 #specialties{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
     div{
         a{
@@ -29,6 +35,11 @@
             }
         }
     }
+}
+
+#socialmedias{
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 1121px){
@@ -45,5 +56,8 @@
         h3{
             padding: 0;
         }
+    }
+    #specialties{
+        justify-content: center;
     }
 }

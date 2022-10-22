@@ -379,20 +379,22 @@ footer {
 }
 
 #abouttext {
-  display: flex;
   flex-direction: column;
 }
 
 #specialties {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-basis: auto;
   gap: 1rem;
 }
-#specialties div a:hover {
+#specialties a {
+  flex-wrap: wrap;
+}
+#specialties a:hover {
   cursor: pointer;
 }
-#specialties div a img {
+#specialties a img {
   width: 2rem;
 }
 
@@ -419,6 +421,7 @@ footer {
 
   #specialties {
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
 #workcontainer {

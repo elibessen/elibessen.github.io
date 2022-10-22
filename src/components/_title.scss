@@ -8,7 +8,6 @@
 
 #titlecontainer{
     display: flex;
-    flex-wrap: wrap;
     margin-left: 3rem;
     padding-top: 25vh;
     height: 70vh;
@@ -43,6 +42,7 @@
         flex-direction: column;
         h1{
             flex-direction: column;
+            text-align: center;
         }
         p{
             text-align: center;
@@ -64,6 +64,7 @@
     #title{
         h1{
             font-size: 5rem; 
+            text-align: center;
         }
         p{
             text-align: center;
@@ -84,6 +85,7 @@
     #title{
         h1{
             font-size: 4rem; 
+            text-align: center;
         }
     }
 }

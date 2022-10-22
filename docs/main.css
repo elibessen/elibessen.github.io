@@ -93,7 +93,6 @@
 
 #titlecontainer {
   display: flex;
-  flex-wrap: wrap;
   margin-left: 3rem;
   padding-top: 25vh;
   height: 70vh;
@@ -130,6 +129,7 @@
   }
   #title h1 {
     flex-direction: column;
+    text-align: center;
   }
   #title p {
     text-align: center;
@@ -150,6 +150,7 @@
 
   #title h1 {
     font-size: 5rem;
+    text-align: center;
   }
   #title p {
     text-align: center;
@@ -168,6 +169,7 @@
 
   #title h1 {
     font-size: 4rem;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 400px) {

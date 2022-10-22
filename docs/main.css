@@ -2,9 +2,8 @@
   display: flex;
   background-color: white;
   border-bottom: 0.5px solid #cdcdcd;
-  position: fixed;
   width: 100%;
-  z-index: 1;
+  align-items: center;
 }
 .navbar .nav-item a {
   color: black;
@@ -16,30 +15,25 @@
 
 .nav {
   list-style-type: none;
+  align-items: center;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  position: sticky;
-  gap: 1rem;
 }
 
 .nav-brand {
-  padding-left: 4rem;
   display: inline;
   float: left;
+  padding-left: 4rem;
 }
 .nav-brand a {
   display: flex;
-  flex-direction: row;
   text-decoration: none;
   text-align: center;
-  display: block;
   font-size: 1.2rem;
   font-weight: 650;
 }
 
 .nav-item {
-  display: inline;
   flex-grow: 1;
   flex-basis: 0;
 }
@@ -52,15 +46,14 @@
   padding: 1.3rem 1.3rem;
 }
 
-@media only screen and (max-width: 1121px) {
-  .nav-brand {
-    padding-left: 0;
+@media only screen and (min-width: 601px) {
+  .nav-item {
+    display: inline;
   }
 
   .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    position: fixed;
+    z-index: 1;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -69,11 +62,12 @@
   }
 
   .nav {
-    flex-direction: column;
+    text-align: center;
+    order: 2;
   }
 
-  .navbar {
-    flex-wrap: nowrap;
+  .nav-items {
+    flex-direction: column;
   }
 }
 .button {
@@ -165,7 +159,7 @@
   #titlecontainer {
     justify-content: center;
     margin-left: 0rem;
-    padding-top: 20vh;
+    padding-top: 10vh;
     height: 85vh;
   }
 

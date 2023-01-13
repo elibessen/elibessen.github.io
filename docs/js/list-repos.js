@@ -9,7 +9,7 @@ function generateRepos(){
             if(request[i].name ==='elibessen'){
                 request.splice(i,1);
             }
-            $(".grid").append(`
+            $(".autogrid").append(`
             <a class="card" href="https://github.com/elibessen/${request[i].name}">
                 <h3>${request[i].name}</h3>
                 <p>${request[i].description}</p>

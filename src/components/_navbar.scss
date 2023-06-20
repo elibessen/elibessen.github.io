@@ -39,14 +39,27 @@
     flex-grow: 1;
     flex-basis: 0;
     // Styling anchor tag within any nav item
-    a{
-        float: left;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: 500;
-        display: block;
-        padding: 1.3rem 1.3rem;
+    &.left{
+        a{
+            float: left;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            display: block;
+            padding: 1.3rem 1.3rem;
+        }
     }
+    &.right{
+        a{
+            float: right;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            display: block;
+            padding: 1.3rem 1.3rem;
+        }
+    }
+
 }
 
 @media only screen and (min-width: 601px){

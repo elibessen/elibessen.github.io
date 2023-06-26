@@ -10,7 +10,7 @@
 }
 .navbar .nav-item a:hover {
   cursor: pointer;
-  color: rgb(133, 133, 133);
+  color: rgb(106, 161, 9);
 }
 
 .nav {
@@ -33,20 +33,15 @@
   font-weight: 650;
 }
 
-.nav-item {
-  flex-grow: 1;
-  flex-basis: 0;
-}
-.nav-item.left a {
-  float: left;
+.nav-item a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   display: block;
   padding: 1.3rem 1.3rem;
 }
-.nav-item.right a {
-  float: right;
+
+.nav-social a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -58,21 +53,35 @@
   .nav-item {
     display: inline;
   }
+  .nav-item a {
+    float: left;
+  }
+  .nav-social a {
+    float: right;
+  }
   .navbar {
     position: fixed;
     z-index: 1;
   }
+  .nav {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .nav-brand {
-    padding-left: 0rem;
+    padding: 0rem 1rem;
+    text-align: center;
   }
   .nav {
     text-align: center;
     order: 2;
   }
-  .nav-items {
+  .nav-iteM {
     flex-direction: column;
+    text-align: center;
+  }
+  .nav-iteM a {
+    padding: 1rem 1rem;
   }
 }
 .button {

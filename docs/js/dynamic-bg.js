@@ -10,7 +10,6 @@ $(window).resize(function(){
 
 window.addEventListener('scroll', () => {
     let y = 1 + (window.scrollY || window.pageYOffset) / 150;
-    console.log(y);
     if (y < elementPosition + 5){
         y = 1;
     }else{

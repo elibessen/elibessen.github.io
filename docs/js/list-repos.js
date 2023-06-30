@@ -3,6 +3,7 @@ function generateRepos(){
     var request = $.get(requestURL, function () {
     }).done(function(){
         request = request.responseJSON;
+
         console.log(request);
         for(i = 0; i < request.length; i++){
             console.log(request[i].name);

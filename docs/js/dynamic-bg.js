@@ -1,6 +1,6 @@
 const [red, green, blue] = [255, 255, 255];
 const changedSection = document.querySelector('body');
-const footer = document.querySelector("#footer")
+const footer = document.querySelector("#footer");
 
 let elementPosition = (footer.getBoundingClientRect().y) / 150;
 

@@ -1,0 +1,112 @@
+#timelinecontainer{
+    width: 100%;
+    padding-left: 0rem;
+    margin-left: 0rem;
+}
+
+.timeline {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .li {
+    transition: all 200ms ease-in;
+  }
+  .timestamp {
+    margin-bottom: 1.25rem;
+    padding: 0rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+    text-align: center;
+  }
+  .status {
+    padding: 0px 2.5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: all 200ms ease-in;
+    h4 {
+      font-weight: 600;
+    }
+    &:before {
+      content: '';
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      position: absolute;
+      top: -15px;
+      left: 47%;
+      transition: all 200ms ease-in;
+    }
+  }
+  .li.complete {
+    width: 100%;
+    .status {
+        border-top: 2px solid #00C7F8;
+        h4{
+            text-align: center;
+        }
+      &:before {
+        background-color: #00C7F8;
+        border: none;
+        transition: all 200ms ease-in;  
+      }
+    }
+  }
+
+@media only screen and (min-width: 768px){
+    .timeline .timestamp{
+        flex-direction: column;
+    }
+    .li.complete{
+        h4{
+            color: #00C7F8;
+            font-weight: 600;
+        }
+        span{
+            color: black;
+            font-weight: normal;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .timeline{
+        display: none;
+    }
+    // Im lazy so ill do this later :/
+    
+    // .timeline{
+    //     flex-direction: column;
+    //     list-style-type: decimal-leading-zero;
+    //     .timestamp{
+    //         padding: 0rem 0rem;
+    //         margin: 0rem 0rem;
+    //     }
+    // }
+    // .li.complete{
+    //     flex-direction: row;
+    //     .status{
+    //         justify-content: center;
+    //         text-align: center;
+    //         border-top: white;
+    //         &:before{
+    //             background-color: rgba(255, 255, 255, 0);
+    //         }
+    //     }
+    //     h4{
+    //         color: black;
+    //         font-weight: normal;
+    //         margin: 0.8rem 0rem;
+    //     }
+    //     span{
+    //         color: #00C7F8;
+    //         font-weight: 600;
+    //     }
+    // }
+
+}

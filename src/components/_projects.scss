@@ -1,13 +1,15 @@
 #projectcontainer{
-    margin-left: 3rem;
     margin-bottom: 10rem;
     margin-top: 12rem;
+    text-align: center;
     h1{
         font-size: 4.5rem;
-        margin: 0;
+        margin: 0rem;
+        padding: 0rem;
     }
     p{
-        padding: 0;
+        padding: 0rem;
+        margin: 0rem;
     }
 }
 
@@ -30,6 +32,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-right: 3rem;
+    margin-left: 3rem;
 }
 
 .card {
@@ -103,9 +106,7 @@
         }
     }
 }
-
-
-
+x   
 #currentprojectscontainer{
     margin-left: 3rem;
     margin-bottom: 10rem;

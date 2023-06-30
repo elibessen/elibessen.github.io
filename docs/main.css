@@ -224,16 +224,18 @@
 }
 
 #projectcontainer {
-  margin-left: 3rem;
   margin-bottom: 10rem;
   margin-top: 12rem;
+  text-align: center;
 }
 #projectcontainer h1 {
   font-size: 4.5rem;
-  margin: 0;
+  margin: 0rem;
+  padding: 0rem;
 }
 #projectcontainer p {
-  padding: 0;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 #aligncenter {
@@ -255,6 +257,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .card {
@@ -328,16 +331,28 @@
     padding: 0;
   }
 }
-#currentprojectscontainer {
+x #currentprojectscontainer {
   margin-left: 3rem;
   margin-bottom: 10rem;
   margin-top: 12rem;
 }
-#currentprojectscontainer h1 {
+x #currentprojectscontainer h1 {
   font-size: 4.5rem;
   margin: 0;
 }
-#currentprojectscontainer p {
+x #currentprojectscontainer p {
+  padding: 0;
+}
+
+#currentprojectcontainer {
+  text-align: center;
+  margin-top: 20rem;
+}
+#currentprojectcontainer h1 {
+  font-size: 4.5rem;
+  margin: 0;
+}
+#currentprojectcontainer p {
   padding: 0;
 }
 
@@ -533,6 +548,88 @@
   #child1, #child2 {
     border-right: none;
     border-bottom: 1px solid rgb(222, 222, 222);
+  }
+}
+#timelinecontainer {
+  width: 100%;
+  padding-left: 0rem;
+  margin-left: 0rem;
+}
+
+.timeline {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.li {
+  transition: all 200ms ease-in;
+}
+
+.timestamp {
+  margin-bottom: 1.25rem;
+  padding: 0rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+  text-align: center;
+}
+
+.status {
+  padding: 0px 2.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: all 200ms ease-in;
+}
+.status h4 {
+  font-weight: 600;
+}
+.status:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: -15px;
+  left: 47%;
+  transition: all 200ms ease-in;
+}
+
+.li.complete {
+  width: 100%;
+}
+.li.complete .status {
+  border-top: 2px solid #00C7F8;
+}
+.li.complete .status h4 {
+  text-align: center;
+}
+.li.complete .status:before {
+  background-color: #00C7F8;
+  border: none;
+  transition: all 200ms ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline .timestamp {
+    flex-direction: column;
+  }
+  .li.complete h4 {
+    color: #00C7F8;
+    font-weight: 600;
+  }
+  .li.complete span {
+    color: black;
+    font-weight: normal;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .timeline {
+    display: none;
   }
 }
 html, body {

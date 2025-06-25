@@ -1,17 +1,17 @@
 // sass --watch ./src/main.scss ./docs/main.css
 
-@import "components/navbar";
-@import "components/buttons";
-@import "components/title";
-@import "components/contact";
-@import "components/projects";
-@import "components/currentProject";
-@import "components/footer";
-@import "components/about";
-@import "components/work";
-@import "components/specialties";
-@import "components/timeline";
-
+@use "components/navbar";
+@use "components/buttons";
+@use "components/title";
+@use "components/contact";
+@use "components/projects";
+@use "components/currentProject";
+@use "components/footer";
+@use "components/about";
+@use "components/work";
+@use "components/specialties";
+@use "components/timeline";
+@use "components/scrollprogress";
 
 html, body{
   padding: 0;

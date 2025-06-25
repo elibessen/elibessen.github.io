@@ -1,0 +1,11 @@
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: #4682b4;
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+  border: none;
+}

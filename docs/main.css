@@ -410,6 +410,15 @@ x #currentprojectscontainer p {
   font-size: 1.5rem;
   padding: 0;
   font-weight: 500;
+  padding-left: 0.5rem;
+}
+#aboutcontainer p {
+  padding-left: 0.5rem;
+}
+
+#about-title {
+  display: flex;
+  flex-direction: row;
 }
 
 #colorcontainer {
@@ -441,6 +450,31 @@ x #currentprojectscontainer p {
   flex-direction: column;
 }
 
+#profile-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  padding: 0.5rem;
+  margin-right: 1em;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: pulse-shadow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.025);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1);
+  }
+}
 @media only screen and (max-width: 1121px) {
   #aboutcontainer {
     justify-content: center;
@@ -456,9 +490,22 @@ x #currentprojectscontainer p {
   #aboutcontainer h3 {
     padding: 0;
   }
+  #aboutcontainer p {
+    padding: 0;
+  }
   #specialties {
     justify-content: center;
     flex-wrap: wrap;
+  }
+  #about-title {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    margin-right: 0em;
+  }
+  #profile-pic {
+    margin-right: 0;
   }
 }
 #workcontainer {
@@ -768,12 +815,76 @@ x #currentprojectscontainer p {
   border: none;
 }
 
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1; /* visible immediately */
+  animation: fade-out 1s ease 2.5s forwards;
+}
+#intro-screen #intro-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 4rem;
+}
+#intro-screen .wave-emoji {
+  animation: wave 1.2s infinite ease-in-out;
+  opacity: 1; /* visible immediately */
+}
+#intro-screen .intro-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  opacity: 0; /* start transparent */
+  animation: fade-in-text 1s ease forwards;
+  animation-delay: 0.5s; /* fade in after half a second */
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes fade-in-text {
+  to {
+    opacity: 1;
+  }
+}
 html, body {
   padding: 0;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+#page {
+  opacity: 1;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 #bottomcontainer {

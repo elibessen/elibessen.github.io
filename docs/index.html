@@ -1,6 +1,6 @@
 
 <head>
-  <title>Eli Bessen | Programmer, Student</title>
+  <title>Eli Bessen - Computer Science Student & Developer</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="main.css"/>
@@ -12,7 +12,13 @@
 </head>
 <body>
   <div id="scroll-progress"></div>
-  <div id="page">
+  <div id="intro-screen">
+    <div id="intro-content">
+      <span class="wave-emoji">👋</span>
+      <span class="intro-text">Hello!</span>
+    </div>
+  </div>
+  <div id="page" class="hidden">
     <div id="content">
       <nav class="navbar">
         <ul class="nav">
@@ -43,9 +49,12 @@
             <div style="width: 50vw;">
               <div>
                 <p>Who am I?</p>
-                <h1>Hey, I&apos;m Eli!</h1>
+                <div id="about-title">
+                  <img id="profile-pic" src="img/me.jpg">
+                  <h1>Hey, I&apos;m Eli!</h1>
+                </div>
                 <h3></h3>
-                <h3>I&apos;m a Junior Computer Scientist in Australia currently studying a Bachelor of Computer Science and working in the Technology Team at <a href="https://sarah.com.au/">Sarah</a>.</h3>
+                <h3>I'm a Computer Science student majoring in Artifical Intelligence at the University of Adelaide and working in the Technology Team at <a href="https://sarah.com.au/">Sarah</a>.</h3>
                 <!-- <h5>I&apos;m a free lance developer looking to develop new and exciting applications.</h5> -->
               </div>
               <div id="specialties">
@@ -59,58 +68,60 @@
             </div>
           </div>
         </div>
-        <div id="specialtiescontainers">
-          <div class="parent">
-            <div id="child1" class="children">
-              <img src="./img/layers.svg" />
-              <h3>Front-end development</h3>
-              <p>I love to code and design beautiful front-ends.</p>
-              <p style="margin: 0.5rem; color: #00C7F8">Languages I understand:</p>
-              <div id="devtools">
-                <p style="margin-top: 0rem;">HTML</p>
-                <p>CSS</p>
-                <p>SCSS/Sass</p>
-                <p>Pug</p>
-                <p>Javascript</p>
-                <p>Typescript</p>
-              </div>
+       <div id="specialtiescontainers">
+        <div class="parent">  
+          <div id="child1" class="children">
+            <img src="./img/layers.svg" />
+            <h3>Software Development</h3>
+            <p>I enjoy building efficient, user-focused and intelligent applications across the full stack.</p>
+            <p style="margin: 0.5rem; color: #00C7F8">Languages I use:</p>
+            <div id="devtools">
+              <p style="margin-top: 0rem;">HTML</p>
+              <p>CSS</p>
+              <p>SCSS/Sass</p>
+              <p>Pug</p>
+              <p>JavaScript/Typescript</p>
+              <p>Python</p>
+              <p>C</p>
+              <p>PHP</p>
+              <p>SQL</p>
+              <p>MATLAB</p>
             </div>
-            <div id="child2" class="children">
-              <img src="./img/terminal.svg" />
-              <h3>Back-end development</h3>
-              <p>I have a passion for elegant, intelligent systems.</p>
-              <p style="margin: 0.5rem; color: #00C7F8">Languages I understand:</p>
-              <div id="devtools">
-                <p style="margin-top: 0rem;">C</p>
-                <p>Python</p>
-                <p>PHP</p>
-                <p>SQL</p>
-                <p>MATLAB</p>
-              </div>
+          </div>
+          <div id="child2" class="children">
+            <img src="./img/hard-drive.svg" />
+            <h3>Tooling and Infrastructure</h3>
+            <p>I’m familiar with modern frameworks and development infrastructure that support scalable software delivery.</p>
+            <p style="margin: 0.5rem; color: #00C7F8">Technologies I use:</p>
+            <div id="devtools">
+              <a style="margin-top: 0rem;" href="https://nextjs.org/">Next.js</a>
+              <a href="https://react.dev/">React</a>
+              <a href="https://expressjs.com/">Express</a>
+              <a href="https://jquery.com/">jQuery</a>
+              <a href="https://getbootstrap.com/">Bootstrap</a>
+              <a href="https://ubuntu.com/wsl">WSL</a>
+              <a href="https://git-scm.com/">Git</a>
+              <a href="https://www.docker.com/">Docker</a>
+              <a href="https://firebase.google.com/">Firebase</a>
             </div>
-            <div class="children">
-              <img src="./img/hard-drive.svg" />
-              <h3>Infrastructure, Frameworks and Tooling</h3>
-              <p>I love to learn new and innovative technologies.</p>
-              <p style="margin: 0.5rem; color: #00C7F8">Technologies I know:</p>
-              <p style="margin: 0rem;"></p>
-              <div id="devtools">
-                <a style="margin-top: 0rem;" href="https://nextjs.org/">Next.js</a>
-                <a href="https://react.dev/">React</a>
-                <a href="https://expressjs.com/">Express</a>
-                <a href="https://jquery.com/">jQuery</a>
-                <a href="https://getbootstrap.com/">Bootstrap</a>
-                <a href="https://ubuntu.com/wsl">WSL</a>
-                <a href="https://git-scm.com/">Git</a>
-                <a href="https://www.docker.com/">Docker</a>
-                <a href="https://firebase.google.com/">Firebase</a>
-              </div>
+          </div>
+          <div class="children">
+            <img src="./img/terminal.svg" />
+            <h3>Artificial Intelligence</h3>
+            <p>I am currently learning to design, train, and optimize machine learning models and neural networks, focusing on practical applications and foundational theory.</p>
+            <p style="margin: 0.5rem; color: #00C7F8">Areas of interest:</p>
+            <div id="devtools">
+              <p style="margin-top: 0rem;">Supervised & Unsupervised Learning</p>
+              <p>Neural Networks</p>
+              <p>Data Processing</p>
+              <p>Model Evaluation & Tuning</p>
             </div>
           </div>
         </div>
+      </div>
         <section id="timeline-section">
           <div id="timeline-header">
-            <h1>My Personal Timeline</h2>
+            <h1>My Timeline</h2>
             <p>
               This timeline highlights key milestones in my programming journey and career progression.
             </p>
@@ -118,17 +129,17 @@
           <div class="timeline">
             <div class="timeline-line" id="timeline-line"></div>
             <div class="timeline-container">
-              <div class="timeline-item left" data-date="2018–2019">
+              <div class="timeline-item left" data-date="2018–2022">
                 <h3>Started and Built Programming Foundations</h3>
-                <p>I began learning the basics of programming through school classes in 2018, then advanced rapidly through more complex coursework in 2019, consistently achieving strong results.</p>
+                <p>I began learning the basics of programming through school classes in 2018, then advanced rapidly through more complex coursework from 2019-2022, consistently achieving strong results.</p>
               </div>
               <div class="timeline-item right" data-date="2022">
                 <h3>High School Graduation</h3>
                 <p>Graduated with an ATAR score of 84, marking a successful completion of secondary education.</p>
               </div>
               <div class="timeline-item left" data-date="2024-Present">
-                <h3>Commenced Bachelor of Computer Science</h3>
-                <p>Enrolled at the University of Adelaide to pursue a Bachelor’s degree in Computer Science. Currently achieving a GPA of 6</p>
+                <h3>Commenced Bachelor of Computer Science (AI Major)</h3>
+                <p>Enrolled at the University of Adelaide to pursue a Bachelor’s degree in Computer Science, with a major in Artifical Intelligence. Currently achieving a GPA of 6</p>
               </div>
               <div class="timeline-item right" data-date="2024-Present">
                 <h3>Technology Administrator</h3>
@@ -168,4 +179,5 @@
   </script>
   <script src="js/dynamic-bg.js"></script>
   <script src="js/timeline.js"></script>
+  <script src="js/intro-page.js"></script>
 </body>

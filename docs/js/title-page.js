@@ -2,7 +2,7 @@ const words = [
   "Computer Scientist.",
   "Frontend Developer.",
   "AI Student.",
-  "Technology Administrator.",
+  "Technology Admin.",
   "Web Developer.",
   "Software Engineer.",
   "Systems Thinker.",

@@ -43,10 +43,6 @@ body {
   opacity: 0;
 }
 
-#bottomcontainer {
-  padding-bottom: 10rem;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -65,4 +61,81 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #4caf50;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(24px);
+  }
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ddd;
+
+  // Scrollbar for dark mode
+  &::-webkit-scrollbar-track {
+    background: #2a2a2a;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  // Override any light backgrounds in main layout containers if needed
+  #page {
+    background-color: transparent; // or #121212 if page container has background
+  }
+
+  #bottomcontainer {
+    // if you want consistent bg color on padding area
+    background-color: transparent;
+  }
 }

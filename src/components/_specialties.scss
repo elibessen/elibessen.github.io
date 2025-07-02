@@ -70,3 +70,47 @@
     border-bottom: 1px solid rgb(222, 222, 222);
   }
 }
+
+body.dark-mode {
+  #specialtiescontainers {
+    .parent {
+      background-color: #121212 !important;
+      border-color: #444 !important;
+      box-shadow: 0px 2px #000000cc !important;
+      color: #ddd !important;
+    }
+    .children {
+      color: #ccc !important;
+      img {
+        background-color: #004a66 !important;
+      }
+      #devtools {
+        p {
+          color: #ccc !important;
+        }
+        a {
+          color: #ccc !important;
+          &:hover {
+            color: #8ad6ff !important;
+          }
+        }
+      }
+    }
+    #child1,
+    #child2 {
+      border-color: #444 !important;
+    }
+  }
+
+  @media only screen and (max-width: 1121px) {
+    #specialtiescontainers {
+      .parent {
+        border-color: #444 !important;
+      }
+      #child1,
+      #child2 {
+        border-bottom-color: #444 !important;
+      }
+    }
+  }
+}

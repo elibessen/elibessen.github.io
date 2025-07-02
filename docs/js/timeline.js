@@ -2,6 +2,15 @@ const timeline = document.querySelector(".timeline");
 const timelineLine = document.getElementById("timeline-line");
 const items = Array.from(document.querySelectorAll(".timeline-item"));
 
+const scrollProgressBar = document.getElementById("scroll-progress");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  scrollProgressBar.style.width = scrollPercent + "%";
+});
+
 items.forEach((item) => {
   const date = item.getAttribute("data-date");
   const dateEl = document.createElement("div");

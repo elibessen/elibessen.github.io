@@ -4,16 +4,18 @@
   display: flex;
   flex-direction: row;
   padding-top: 6rem;
+
   h1 {
     font-size: 4.5rem;
     margin: 0;
   }
+
   h3 {
     font-size: 1.5rem;
-    padding: 0;
     font-weight: 500;
-    padding-left: 0.5rem;
+    padding: 0 0 0 0.5rem;
   }
+
   p {
     padding-left: 0.5rem;
   }
@@ -29,21 +31,24 @@
 }
 
 #abouttext {
+  display: flex;
   flex-direction: column;
 }
 
 #specialties {
   display: flex;
   flex-direction: row;
-  flex-basis: auto;
+  flex-wrap: wrap;
   gap: 1rem;
+
   a {
-    flex-wrap: wrap;
     &:hover {
       cursor: pointer;
     }
+
     img {
       width: 2rem;
+      filter: invert(0);
     }
   }
 }
@@ -82,34 +87,65 @@
 @media only screen and (max-width: 1121px) {
   #aboutcontainer {
     justify-content: center;
-    margin-left: 0rem;
+    margin-left: 0;
     text-align: center;
     align-items: center;
-    align-self: center;
+    flex-direction: column;
+
     h1 {
       font-size: 3.5rem;
-      margin: 0;
     }
-    h3 {
-      padding: 0;
-    }
+
+    h3,
     p {
       padding: 0;
     }
   }
+
   #specialties {
     justify-content: center;
-    flex-wrap: wrap;
     padding-left: 5px;
   }
+
   #about-title {
     justify-content: center;
     align-items: center;
-    align-self: center;
     flex-direction: column;
-    margin-right: 0em;
+    margin-right: 0;
   }
+
   #profile-pic {
     margin-right: 0;
+  }
+}
+
+// DARK MODE STYLES
+body.dark-mode {
+  #colorcontainer {
+    background-color: #1e1e1e;
+  }
+
+  #aboutcontainer {
+    color: #e0e0e0;
+
+    h1 {
+      color: #f0f0f0;
+    }
+
+    h3,
+    p {
+      color: #ccc;
+    }
+  }
+
+  #profile-pic {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  }
+
+  #specialties {
+    a img {
+      filter: brightness(0.9);
+      filter: invert(1);
+    }
   }
 }

@@ -1,37 +1,53 @@
 .footer {
-  position: absolute;
-  height: auto;
+  position: relative; // was absolute, change if needed
+  width: 100%;
   padding-top: 40rem;
-  width: 100vw;
-  color: rgb(255, 255, 255);
+  color: #fff;
+  background-color: transparent;
+
+  // Dark mode override
+  body.dark-mode & {
+    color: black;
+  }
 }
 
 .footer-content {
   padding-top: 5rem;
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
+  gap: 2rem;
+
   h3 {
     font-size: 3rem;
     font-weight: 700;
     margin: 1rem;
     padding: 0;
   }
+
   h5 {
     color: grey;
     max-width: 500px;
     font-size: 1rem;
-    padding: 0;
     margin: 0;
+    padding: 0;
+
+    body.dark-mode & {
+      color: #ccc;
+    }
   }
+
   p {
     color: grey;
     max-width: 500px;
     font-size: 0.6rem;
-    padding: 0;
     margin: 0;
+    padding: 0;
+
+    body.dark-mode & {
+      color: black;
+    }
   }
 }

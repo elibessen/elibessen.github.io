@@ -1,14 +1,17 @@
-
 <head>
   <title>Eli Bessen - Computer Science Student & Developer</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" href="main.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="main.css" />
   <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="js/list-repos.js"></script>
-  <!-- <link rel="icon" type="image/x-icon" href="">-->
+  <link rel="icon" type="image/x-icon" href="img/favicon.png" />
 </head>
 <body>
   <div id="scroll-progress"></div>
@@ -21,129 +24,204 @@
   <div id="page" class="hidden">
     <div id="content">
       <nav class="navbar">
-        <ul class="nav">
-          <li class="nav-brand">
-            <a style="display: flex;" href="index.html">
-              <p>Eli</p>
-              <p style="color: rgb(144, 220, 12);">Bessen</p>
-            </a>
-          </li>
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#projectcontainer">Projects</a></li>
-          <li class="nav-social"><a href="https://au.linkedin.com/in/eli-bessen-586652337"><img src="./img/linkedin.svg"/></a></li>
-          <li class="nav-social"><a href="https://github.com/elibessen"><img src="./img/github.svg"/></a></li>
-        </ul>
+        <div class="nav-container">
+          <a href="index.html" class="nav-brand">
+            <p>Eli</p>
+            <p class="highlight">Bessen</p>
+          </a>
+          <button
+            class="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <div class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#projectcontainer">Projects</a></li>
+            </ul>
+            <ul class="nav-socials">
+              <li>
+                <a
+                  href="https://au.linkedin.com/in/eli-bessen-586652337"
+                  target="_blank"
+                  rel="noopener"
+                  ><img src="./img/linkedin.svg" alt="LinkedIn"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/elibessen"
+                  target="_blank"
+                  rel="noopener"
+                  ><img src="./img/github.svg" alt="GitHub"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <div id="titlecontainer">
         <div id="title">
-          <h1 id="oneline">Australian 
-            <div id="textgradient">Computer</div>
+          <h1 class="title-static">Australian</h1>
+          <h1 id="typewriter-line">
+            <span id="typewriter" class="text-gradient"></span
+            ><span class="cursor">|</span>
           </h1>
-          <h1>Scientist.</h1>
-          <p>I'm a Computer Science student at <a href="https://www.adelaide.edu.au/">The University of Adelaide</a>.</p>
+          <p>
+            I'm a Computer Science student at
+            <a href="https://adelaideuni.edu.au">Adelaide University</a
+            >.
+          </p>
         </div>
       </div>
       <div id="bottomcontainer">
         <div id="colorcontainer">
           <div id="aboutcontainer">
-            <div style="width: 50vw;">
+            <div style="width: 50vw">
               <div>
                 <p>Who am I?</p>
                 <div id="about-title">
-                  <img id="profile-pic" src="img/me.jpg">
+                  <img id="profile-pic" src="img/me.jpg" />
                   <h1>Hey, I&apos;m Eli!</h1>
                 </div>
                 <h3></h3>
-                <h3>I'm a Computer Science student majoring in Artifical Intelligence at the University of Adelaide and working in the Technology Team at <a href="https://sarah.com.au/">Sarah</a>.</h3>
+                <h3>
+                  I'm a Computer Science student majoring in Artifical
+                  Intelligence at the University of Adelaide and working in the
+                  Technology Team at <a href="https://sarah.com.au/">Sarah</a>.
+                </h3>
                 <!-- <h5>I&apos;m a free lance developer looking to develop new and exciting applications.</h5> -->
               </div>
               <div id="specialties">
-                  <a href="https://firebase.google.com/"><img src="./img/firebase.svg"/></a>
-                  <a href="https://reactjs.org/"><img src="./img/react.svg"/></a>
-                  <a href="https://www.javascript.com/"><img src="./img/js.svg"/></a>
-                  <a href="https://www.typescriptlang.org/"><img src="./img/typescript.svg"/></a>
-                  <a href="https://www.python.org/"><img src="./img/python.svg"/></a>
-                  <a href="https://sass-lang.com/"><img src="./img/sass.svg"/></a>
+                <a href="https://firebase.google.com/"
+                  ><img src="./img/firebase.svg"
+                /></a>
+                <a href="https://reactjs.org/"><img src="./img/react.svg" /></a>
+                <a href="https://www.javascript.com/"
+                  ><img src="./img/js.svg"
+                /></a>
+                <a href="https://www.typescriptlang.org/"
+                  ><img src="./img/typescript.svg"
+                /></a>
+                <a href="https://www.python.org/"
+                  ><img src="./img/python.svg"
+                /></a>
+                <a href="https://sass-lang.com/"
+                  ><img src="./img/sass.svg"
+                /></a>
               </div>
             </div>
           </div>
         </div>
-       <div id="specialtiescontainers">
-        <div class="parent">  
-          <div id="child1" class="children">
-            <img src="./img/layers.svg" />
-            <h3>Software Development</h3>
-            <p>I enjoy building efficient, user-focused and intelligent applications across the full stack.</p>
-            <p style="margin: 0.5rem; color: #00C7F8">Languages I use:</p>
-            <div id="devtools">
-              <p style="margin-top: 0rem;">HTML</p>
-              <p>CSS</p>
-              <p>SCSS/Sass</p>
-              <p>Pug</p>
-              <p>JavaScript/Typescript</p>
-              <p>Python</p>
-              <p>C</p>
-              <p>PHP</p>
-              <p>SQL</p>
-              <p>MATLAB</p>
+        <div id="specialtiescontainers">
+          <div class="parent">
+            <div id="child1" class="children">
+              <img src="./img/layers.svg" />
+              <h3>Software Development</h3>
+              <p>
+                I enjoy building efficient, user-focused and intelligent
+                applications across the full stack.
+              </p>
+              <p style="margin: 0.5rem; color: #00c7f8">Languages I use:</p>
+              <div id="devtools">
+                <p style="margin-top: 0rem">HTML</p>
+                <p>CSS</p>
+                <p>SCSS/Sass</p>
+                <p>Pug</p>
+                <p>JavaScript/Typescript</p>
+                <p>Python</p>
+                <p>C</p>
+                <p>PHP</p>
+                <p>SQL</p>
+                <p>MATLAB</p>
+              </div>
             </div>
-          </div>
-          <div id="child2" class="children">
-            <img src="./img/hard-drive.svg" />
-            <h3>Tooling and Infrastructure</h3>
-            <p>I’m familiar with modern frameworks and development infrastructure that support scalable software delivery.</p>
-            <p style="margin: 0.5rem; color: #00C7F8">Technologies I use:</p>
-            <div id="devtools">
-              <a style="margin-top: 0rem;" href="https://nextjs.org/">Next.js</a>
-              <a href="https://react.dev/">React</a>
-              <a href="https://expressjs.com/">Express</a>
-              <a href="https://jquery.com/">jQuery</a>
-              <a href="https://getbootstrap.com/">Bootstrap</a>
-              <a href="https://ubuntu.com/wsl">WSL</a>
-              <a href="https://git-scm.com/">Git</a>
-              <a href="https://www.docker.com/">Docker</a>
-              <a href="https://firebase.google.com/">Firebase</a>
+            <div id="child2" class="children">
+              <img src="./img/hard-drive.svg" />
+              <h3>Tooling and Infrastructure</h3>
+              <p>
+                I’m familiar with modern frameworks and development
+                infrastructure that support scalable software delivery.
+              </p>
+              <p style="margin: 0.5rem; color: #00c7f8">Technologies I use:</p>
+              <div id="devtools">
+                <a style="margin-top: 0rem" href="https://nextjs.org/"
+                  >Next.js</a
+                >
+                <a href="https://react.dev/">React</a>
+                <a href="https://expressjs.com/">Express</a>
+                <a href="https://jquery.com/">jQuery</a>
+                <a href="https://getbootstrap.com/">Bootstrap</a>
+                <a href="https://ubuntu.com/wsl">WSL</a>
+                <a href="https://git-scm.com/">Git</a>
+                <a href="https://www.docker.com/">Docker</a>
+                <a href="https://firebase.google.com/">Firebase</a>
+              </div>
             </div>
-          </div>
-          <div class="children">
-            <img src="./img/terminal.svg" />
-            <h3>Artificial Intelligence</h3>
-            <p>I am currently learning to design, train, and optimize machine learning models and neural networks, focusing on practical applications and foundational theory.</p>
-            <p style="margin: 0.5rem; color: #00C7F8">Areas of interest:</p>
-            <div id="devtools">
-              <p style="margin-top: 0rem;">Supervised & Unsupervised Learning</p>
-              <p>Neural Networks</p>
-              <p>Data Processing</p>
-              <p>Model Evaluation & Tuning</p>
+            <div class="children">
+              <img src="./img/terminal.svg" />
+              <h3>Artificial Intelligence</h3>
+              <p>
+                I am currently learning to design, train, and optimize machine
+                learning models and neural networks, focusing on practical
+                applications and foundational theory.
+              </p>
+              <p style="margin: 0.5rem; color: #00c7f8">Areas of interest:</p>
+              <div id="devtools">
+                <p style="margin-top: 0rem">
+                  Supervised & Unsupervised Learning
+                </p>
+                <p>Neural Networks</p>
+                <p>Data Processing</p>
+                <p>Model Evaluation & Tuning</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         <section id="timeline-section">
           <div id="timeline-header">
-            <h1>My Timeline</h2>
+            <h1>My Timeline</h1>
             <p>
-              This timeline highlights key milestones in my programming journey and career progression.
+              This timeline highlights key milestones in my programming journey
+              and career progression.
             </p>
           </div>
           <div class="timeline">
             <div class="timeline-line" id="timeline-line"></div>
             <div class="timeline-container">
               <div class="timeline-item left" data-date="2018–2022">
-                <h3>Started and Built Programming Foundations</h3>
-                <p>I began learning the basics of programming through school classes in 2018, then advanced rapidly through more complex coursework from 2019-2022, consistently achieving strong results.</p>
+                <h3>Built Programming Foundations</h3>
+                <p>
+                  I began learning the basics of programming through school
+                  classes in 2018, then advanced rapidly through more complex
+                  coursework from 2019-2022, consistently achieving strong
+                  results.
+                </p>
               </div>
               <div class="timeline-item right" data-date="2022">
                 <h3>High School Graduation</h3>
-                <p>Graduated with an ATAR score of 84, marking a successful completion of secondary education.</p>
+                <p>
+                  Graduated with an ATAR score of 84, marking a successful
+                  completion of secondary education.
+                </p>
               </div>
               <div class="timeline-item left" data-date="2024-Present">
                 <h3>Commenced Bachelor of Computer Science (AI Major)</h3>
-                <p>Enrolled at the University of Adelaide to pursue a Bachelor’s degree in Computer Science, with a major in Artifical Intelligence. Currently achieving a GPA of 6</p>
+                <p>
+                  Enrolled at the University of Adelaide to pursue a Bachelor’s
+                  degree in Computer Science, with a major in Artifical
+                  Intelligence. Currently achieving a GPA of 6
+                </p>
               </div>
               <div class="timeline-item right" data-date="2024-Present">
                 <h3>Technology Administrator</h3>
-                <p>Employed at Sarah Group Holdings, working in the Technology Team providing support and administration.</p>
+                <p>
+                  Employed at Sarah Group Holdings, working in the Technology
+                  Team providing support and administration.
+                </p>
               </div>
             </div>
           </div>
@@ -155,9 +233,7 @@
         <div id="projectcontainer">
           <p>What have I worked on?</p>
           <h1>My Repositories.</h1>
-          <div class="autogrid">
-
-          </div>
+          <div class="autogrid"></div>
         </div>
         <div id="footercontainer">
           <div id="footer">
@@ -165,8 +241,12 @@
               <div class="footer-content">
                 <h3>Let&apos;s work together</h3>
                 <!-- <h5>If you have a website or app idea in mind feel free to <a style="text-decoration: none; font-weight: 800; color: rgb(144, 220, 12);" href="contact.html">contact me</a>.</h5><br/> -->
-                <p style="padding-bottom: 2rem;">&copy; 2024-2025 All rights reserved - Front-end developer. Hand designed and coded by <a href="https://github.com/elibessen">Eli Bessen</a> with 🤍.</p>
-                <p style="padding-top: 50rem; color:white;">Hi :)</p>
+                <p style="padding-bottom: 2rem">
+                  &copy; 2024-2025 All rights reserved - Front-end developer.
+                  Hand designed and coded by
+                  <a href="https://github.com/elibessen">Eli Bessen</a> with 🤍.
+                </p>
+                <p style="padding-top: 40rem; color: white">Hi :)</p>
               </div>
             </footer>
           </div>
@@ -180,4 +260,6 @@
   <script src="js/dynamic-bg.js"></script>
   <script src="js/timeline.js"></script>
   <script src="js/intro-page.js"></script>
+  <script src="js/nav-bar.js"></script>
+  <script src="js/title-page.js"></script>
 </body>

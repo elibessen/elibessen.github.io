@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;  /* visible immediately */
-  animation: fade-out 1s ease 2.5s forwards;
+  opacity: 1; /* visible immediately */
+  animation: fade-out 1s ease 2s forwards;
 
   #intro-content {
     display: flex;
@@ -18,16 +18,16 @@
 
   .wave-emoji {
     animation: wave 1.2s infinite ease-in-out;
-    opacity: 1;  /* visible immediately */
+    opacity: 1; /* visible immediately */
   }
 
   .intro-text {
     font-size: 2.5rem;
     font-weight: 600;
     color: #333;
-    opacity: 0;  /* start transparent */
+    opacity: 0; /* start transparent */
     animation: fade-in-text 1s ease forwards;
-    animation-delay: 0.5s;  /* fade in after half a second */
+    animation-delay: 0.5s; /* fade in after half a second */
   }
 }
 
@@ -39,10 +39,19 @@
 }
 
 @keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(20deg); }
-  50% { transform: rotate(-10deg); }
-  75% { transform: rotate(10deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
 }
 
 @keyframes fade-in-text {

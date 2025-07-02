@@ -1,70 +1,72 @@
-#specialtiescontainers{
+#specialtiescontainers {
+  display: flex;
+  justify-content: center;
+  transform: translate(0rem, -3rem);
+  div {
     display: flex;
-    justify-content: center;
-    transform: translate(0rem, -3rem);
-    div{
-        display: flex;
-        flex-direction: row;
+    flex-direction: row;
+  }
+  .parent {
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 1rem;
+    background-color: white;
+    width: 90%;
+    box-shadow: 0px 2px #0000000e;
+  }
+  .children {
+    padding: 2rem;
+    width: 50%;
+    flex-direction: column;
+    text-align: center;
+    img {
+      width: 4rem;
+      padding: 0.8rem;
+      display: block;
+      margin: auto;
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      background-color: #00c7f8;
+      border-radius: 100rem;
     }
-    .parent{
-        border: 1px solid rgb(222, 222, 222);
-        border-radius: 1rem;
-        background-color: white;
-        width: 90%;
-        box-shadow: 0px 2px #0000000e;
+    #devtools {
+      display: flex;
+      flex-direction: column;
+      p {
+        margin: 0.2rem;
+      }
+      a {
+        margin: 0.2rem;
+        color: black;
+        text-decoration: none;
+      }
     }
-    .children{
-        padding: 2rem;
-        width: 50%;
-        flex-direction: column;
-        text-align: center;
-        img{
-            width: 4rem;
-            padding: 0.8rem;
-            display: block;
-            margin: auto;
-            margin-top: 0rem;
-            margin-bottom: 0rem;
-            background-color: #00C7F8;
-            border-radius: 100rem;
-        }
-        #devtools{
-            display: flex;
-            flex-direction: column;
-            p{
-                margin: 0.2rem
-            }
-            a{
-                margin: 0.2rem;
-                color: black;
-                text-decoration: none;
-            }
-        }
-    }
+  }
 }
 
-#child1, #child2{
-    border-right: 1px solid rgb(222, 222, 222);
+#child1,
+#child2 {
+  border-right: 1px solid rgb(222, 222, 222);
 }
 
-@media only screen and (max-width: 1121px){
-    #specialtiescontainers{
-        display: flex;
-        div{
-            display: flex;
-            flex-direction: column;
-        }
-        .parent{
-            align-items: center; 
-            padding: 0rem;
-            width: 85%;
-            .children{
-                width: auto;
-            }
-        }
+@media only screen and (max-width: 1121px) {
+  #specialtiescontainers {
+    display: flex;
+    div {
+      display: flex;
+      flex-direction: column;
     }
-    #child1, #child2{
-        border-right: none;
-        border-bottom: 1px solid rgb(222, 222, 222);
+    .parent {
+      align-items: center;
+      padding: 0rem;
+      width: 85%;
+      .children {
+        width: auto;
+      }
     }
+  }
+  #child1,
+  #child2 {
+    border-right: none;
+    border-bottom: 1px solid rgb(222, 222, 222);
+  }
 }

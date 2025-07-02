@@ -1,21 +1,41 @@
-const [red, green, blue] = [255, 255, 255];
-const changedSection = document.querySelector('body');
+const changedSection = document.body;
 const footer = document.querySelector("#footer");
 
-let elementPosition = (footer.getBoundingClientRect().y) / 150;
+function clamp(num, min, max) {
+  return Math.min(Math.max(num, min), max);
+}
 
-$(window).resize(function(){
-    elementPosition = (footer.getBoundingClientRect().y) / 150;
-})
+function updateBackground() {
+  const footerRect = footer.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
 
-window.addEventListener('scroll', () => {
-    let y = 1 + (window.scrollY || window.pageYOffset) / 150;
-    if (y < elementPosition + 5){
-        y = 1;
-    }else{
-        y = y - elementPosition - 5;
-        const [r, g, b] = [red/y-elementPosition - 45, green/y-elementPosition - 45, blue/y-elementPosition- 45].map(Math.round);
-        changedSection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-        document.querySelector(".footer").style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    }
-})
+  // Start fade 100px before footer hits viewport bottom
+  const fadeStart = windowHeight + 50;
+  // Fade ends 400px below that start (longer fade range)
+  const fadeEnd = fadeStart - 400;
+
+  const distanceToFooter = footerRect.top;
+
+  if (distanceToFooter <= fadeStart && distanceToFooter >= fadeEnd) {
+    let progress = (fadeStart - distanceToFooter) / (fadeStart - fadeEnd);
+    progress = clamp(progress, 0, 1);
+
+    const colorValue = Math.round(255 * (1 - progress));
+    const rgb = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+
+    changedSection.style.backgroundColor = rgb;
+    footer.style.backgroundColor = rgb;
+  } else if (distanceToFooter < fadeEnd) {
+    // Fully black background past fade zone
+    changedSection.style.backgroundColor = "rgb(0, 0, 0)";
+    footer.style.backgroundColor = "rgb(0, 0, 0)";
+  } else {
+    // Default white background before fade zone
+    changedSection.style.backgroundColor = "rgb(255, 255, 255)";
+    footer.style.backgroundColor = "rgb(255, 255, 255)";
+  }
+}
+
+window.addEventListener("scroll", updateBackground);
+window.addEventListener("resize", updateBackground);
+updateBackground();

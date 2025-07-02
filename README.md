@@ -13,8 +13,8 @@
 - Semantic HTML structure for accessibility  
 
 ## Project Structure
-`/src` # SCSS source files
-`/docs` # Compiled site files, i.e HTML, CSS, JS served by Github Pages
+- `/src` # SCSS source files
+- `/docs` # Compiled site files, i.e HTML, CSS, JS served by Github Pages
 
 ## License
 This project is licensed under the MIT License.

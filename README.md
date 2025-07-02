@@ -66,7 +66,7 @@ View it at: [elibessen.com](https://elibessen.com/)
 | Add color gradient and dynamic background | ✅ Done | Gradient title and scroll-triggered background color             |
 | Add job and education timeline        | ✅ Done   | Includes pulsing icons, key events                               |
 | Improve About section visuals         | ✅ Done   | Profile picture with animation, layout tweaks                    |
-| Add 404 page (if using GitHub Pages)      | ✅ Done  | Provide fallback for broken routes                                |
+| Add 404 page                          | ✅ Done  | Provide fallback for broken routes                                |
 
 ---
 
@@ -82,7 +82,7 @@ View it at: [elibessen.com](https://elibessen.com/)
 | Add page load animation                   | ⬜ To Do  | Fade-in or slide animations for intro section                     |
 | Add keyboard navigation support           | ⬜ To Do  | Focus management, skip links, keyboard menu toggle                |
 | Expand documentation                      | ⬜ To Do  | Add file structure, build instructions, and comments in SCSS/JS   |
-| Add project filtering/sorting (optional)  | ⬜ To Do  | Tag or sort repositories using JS                                 |
+| Add project filtering/sorting             | ⬜ To Do  | Tag or sort repositories using JS                                 |
 | Create light/dark theme color presets     | ⬜ To Do  | Define color schemes with consistent contrast                     |
 | Optimize mobile layout for small screens  | ⬜ To Do  | Ensure text wraps correctly and elements stack effectively        |
 

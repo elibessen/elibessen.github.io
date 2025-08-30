@@ -908,6 +908,17 @@ body.dark-mode #specialtiescontainers #child2 {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   z-index: 5;
 }
+.timeline .timeline-container .timeline-item img {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+.timeline .timeline-container .timeline-item #sarah_group {
+  filter: invert(1);
+}
+.timeline .timeline-container .timeline-item #adelaide_uni {
+  filter: invert(0);
+}
 .timeline .timeline-container .timeline-item.left {
   left: 0;
   transform: translateX(-100px);
@@ -1020,14 +1031,14 @@ body.dark-mode #specialtiescontainers #child2 {
   }
 }
 body.dark-mode #timeline-section {
-  color: #bbb;
+  color: #ffffff;
 }
 body.dark-mode #timeline-section #timeline-header h1,
 body.dark-mode #timeline-section #timeline-header p {
-  color: #bbb;
+  color: #ffffff;
 }
 body.dark-mode .timeline {
-  color: #bbb;
+  color: #ffffff;
 }
 body.dark-mode .timeline .timeline-line {
   background: #00a0cc;
@@ -1045,7 +1056,13 @@ body.dark-mode .timeline .timeline-container .timeline-header p {
 body.dark-mode .timeline .timeline-container .timeline-item {
   background: #1e1e1e;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
-  color: #bbb;
+  color: #ffffff;
+}
+body.dark-mode .timeline .timeline-container .timeline-item #adelaide_uni {
+  filter: brightness(0) invert(1);
+}
+body.dark-mode .timeline .timeline-container .timeline-item #sarah_group {
+  filter: invert(0);
 }
 body.dark-mode .timeline .timeline-date {
   color: #00a0cc;

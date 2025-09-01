@@ -13,6 +13,7 @@
   ></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="js/list-repos.js"></script>
+  <script src="js/build-repos.js"></script>
   <link rel="icon" type="image/x-icon" href="img/favicon.png" />
 </head>
 <body>
@@ -83,7 +84,7 @@
           </h1>
           <p>
             I'm a Computer Science student at
-            <a href="https://adelaideuni.edu.au">Adelaide University</a>.
+            <a href="https://adelaideuni.edu.au" target="_blank">Adelaide University</a>.
           </p>
         </div>
       </div>
@@ -94,32 +95,32 @@
               <div>
                 <p>Who am I?</p>
                 <div id="about-title">
-                  <img id="profile-pic" src="img/me.jpg" />
+                  <img id="profile-pic" src="img/me.jpg" alt="Me!"/>
                   <h1>Hey, I&apos;m Eli!</h1>
                 </div>
                 <h3></h3>
                 <h3>
                   I'm a Computer Science student majoring in Artifical
                   Intelligence at Adelaide University and working in the
-                  Technology Team at <a href="https://www.sarahgroup.com.au/">Sarah Group</a>.
+                  Technology Team at <a href="https://www.sarahgroup.com.au/" target="_blank">Sarah Group</a>.
                 </h3>
                 <!-- <h5>I&apos;m a free lance developer looking to develop new and exciting applications.</h5> -->
               </div>
               <div id="specialties">
-                <a href="https://firebase.google.com/"
+                <a href="https://firebase.google.com/" target="_blank"
                   ><img src="./img/firebase.svg"
                 /></a>
-                <a href="https://reactjs.org/"><img src="./img/react.svg" /></a>
+                <a href="https://reactjs.org/" target="_blank"><img src="./img/react.svg" /></a>
                 <a href="https://www.javascript.com/"
                   ><img src="./img/js.svg"
                 /></a>
-                <a href="https://www.typescriptlang.org/"
+                <a href="https://www.typescriptlang.org/" target="_blank"
                   ><img src="./img/typescript.svg"
                 /></a>
-                <a href="https://www.python.org/"
+                <a href="https://www.python.org/" target="_blank"
                   ><img src="./img/python.svg"
                 /></a>
-                <a href="https://sass-lang.com/"
+                <a href="https://sass-lang.com/" target="_blank"
                   ><img src="./img/sass.svg"
                 /></a>
               </div>
@@ -162,14 +163,14 @@
                 <a style="margin-top: 0rem" href="https://nextjs.org/"
                   >Next.js</a
                 >
-                <a href="https://react.dev/">React</a>
-                <a href="https://expressjs.com/">Express</a>
-                <a href="https://jquery.com/">jQuery</a>
-                <a href="https://getbootstrap.com/">Bootstrap</a>
-                <a href="https://ubuntu.com/wsl">WSL</a>
-                <a href="https://git-scm.com/">Git</a>
-                <a href="https://www.docker.com/">Docker</a>
-                <a href="https://firebase.google.com/">Firebase</a>
+                <a href="https://react.dev/" target="_blank">React</a>
+                <a href="https://expressjs.com/" target="_blank">Express</a>
+                <a href="https://jquery.com/" target="_blank">jQuery</a>
+                <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+                <a href="https://ubuntu.com/wsl" target="_blank">WSL</a>
+                <a href="https://git-scm.com/" target="_blank">Git</a>
+                <a href="https://www.docker.com/ target="_blank"">Docker</a>
+                <a href="https://firebase.google.com/" target="_blank">Firebase</a>
               </div>
             </div>
             <div class="children">
@@ -223,7 +224,7 @@
               <div class="timeline-item left" data-date="2024-Present">
                 <img
                   id="adelaide_uni"
-                  src="img/adelaide_uni.png"
+                  src="img/companies/adelaide_uni.png"
                   alt="Sarah Group Holdings Logo"
                   class="company-logo"
                 />
@@ -238,7 +239,7 @@
               <div class="timeline-item right" data-date="2024-Present">
                 <img
                   id="sarah_group"
-                  src="img/sarah_group.png"
+                  src="img/companies/sarah_group.png"
                   alt="Sarah Group Holdings Logo"
                   class="company-logo"
                 />
@@ -257,13 +258,14 @@
           </div>
         </section>
         <div id="currentprojectcontainer">
+          <p>What am I working on?</p>
           <h1>My Projects.</h1>
-          <p>I'm not currently working on anything.</p>
+          <div class="autogrid" id="currentprojects"></div>
         </div>
         <div id="projectcontainer">
           <p>What have I worked on?</p>
           <h1>My Repositories.</h1>
-          <div class="autogrid"></div>
+          <div class="autogrid" id="allprojects"></div>
         </div>
         <div id="footercontainer">
           <div id="footer">
@@ -274,7 +276,7 @@
                 <p style="padding-bottom: 2rem">
                   &copy; 2024-2025 All rights reserved - Front-end developer.
                   Hand designed and coded by
-                  <a href="https://github.com/elibessen">Eli Bessen</a> with 🤍.
+                  <a href="https://github.com/elibessen" target="_blank">Eli Bessen</a> with 🤍.
                 </p>
                 <p style="padding-top: 40rem">Hi :)</p>
               </div>
@@ -286,6 +288,7 @@
   </div>
   <script>
     generateRepos();
+    buildRepos();
   </script>
   <script src="js/background-toggle.js"></script>
   <script src="js/timeline.js"></script>

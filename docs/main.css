@@ -460,6 +460,11 @@ body.dark-mode .text-gradient {
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
+.card img {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
 .card h3 {
   margin: 0;
   font-size: 1.5rem;
@@ -471,11 +476,11 @@ body.dark-mode .text-gradient {
   line-height: 1.5;
   width: fit-content;
 }
-.card:hover, .card:focus {
+.card:hover {
   color: var(--card-hover);
   border-color: var(--card-hover-border);
 }
-.card:hover img svg, .card:focus img svg {
+.card:hover img svg {
   fill: var(--card-hover);
   filter: invert(0);
 }
@@ -510,6 +515,7 @@ body.dark-mode .text-gradient {
 }
 #currentprojectcontainer p {
   padding: 0;
+  margin: 0;
 }
 
 .footer {

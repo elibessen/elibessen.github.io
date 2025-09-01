@@ -1,16 +1,21 @@
-function generateRepos() {
+function buildRepos() {
   var requestURL = "https://api.github.com/users/elibessen/repos";
   var request = $.get(requestURL, function () {}).done(function () {
     request = request.responseJSON;
 
+    var spliceArray = ["elibessen", "elibessen.github.io"]
+
     console.log(request);
     for (i = 0; i < request.length; i++) {
       console.log(request[i].name);
-      if(request[i].name ==='elibessen'){
+      for (j = 0; j < spliceArray.length; j++){
+        if(request[i].name === spliceArray[j]){
           request.splice(i,1);
+        }
       }
-      $("#allprojects").append(`
+      $("#currentprojects").append(`
             <a class="card" href="https://github.com/elibessen/${request[i].name}" target="_blank">
+                <img src='img/projects/${request[i].name}.png' />
                 <h3>${request[i].name}</h3>
                 <p>${request[i].description}</p>
                 <div id="cardinfo">

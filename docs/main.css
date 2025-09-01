@@ -536,7 +536,39 @@ body.dark-mode .footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 2rem;
+}
+.footer-content .emaillink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00c7f8, #0078D4);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: "Arial", sans-serif;
+  gap: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 7em;
+  margin-top: 2rem;
+}
+.footer-content .emaillink h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.footer-content .emoji {
+  display: inline-block;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.8s ease;
+}
+.footer-content .emaillink:hover .emoji {
+  transform: translateX(150px); /* move to the right */
+  opacity: 0;
+}
+.footer-content .emaillink:hover {
+  background: linear-gradient(90deg, #0078D4, #00c7f8);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .footer-content h3 {
   font-size: 3rem;

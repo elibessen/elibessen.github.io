@@ -50,7 +50,7 @@
 }
 
 .grid,
-.autogrid{
+.autogrid {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -71,12 +71,12 @@
     color 0.15s ease,
     border-color 0.15s ease;
 
-  img{
+  img {
     height: 40px;
     width: auto;
     flex-shrink: 0;
   }
-  
+
   h3 {
     margin: 0;
     font-size: 1.5rem;

@@ -6,8 +6,8 @@ function generateRepos() {
     console.log(request);
     for (i = 0; i < request.length; i++) {
       console.log(request[i].name);
-      if(request[i].name ==='elibessen'){
-          request.splice(i,1);
+      if (request[i].name === "elibessen") {
+        request.splice(i, 1);
       }
       $("#allprojects").append(`
             <a class="card" href="https://github.com/elibessen/${request[i].name}" target="_blank">

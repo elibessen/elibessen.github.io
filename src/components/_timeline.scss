@@ -114,10 +114,10 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         width: auto;
         flex-shrink: 0;
       }
-      #sarah_group{
+      #sarah_group {
         filter: invert(1);
       }
-      #adelaide_uni{
+      #adelaide_uni {
         filter: invert(0);
       }
 
@@ -300,11 +300,11 @@ body.dark-mode {
         box-shadow: $dark-shadow;
         color: $dark-color;
 
-        #adelaide_uni{
+        #adelaide_uni {
           filter: brightness(0) invert(1);
         }
-        
-        #sarah_group{
+
+        #sarah_group {
           filter: invert(0);
         }
       }

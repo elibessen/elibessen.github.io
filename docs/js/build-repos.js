@@ -3,14 +3,14 @@ function buildRepos() {
   var request = $.get(requestURL, function () {}).done(function () {
     request = request.responseJSON;
 
-    var spliceArray = ["elibessen", "elibessen.github.io"]
+    var spliceArray = ["elibessen", "elibessen.github.io"];
 
     console.log(request);
     for (i = 0; i < request.length; i++) {
       console.log(request[i].name);
-      for (j = 0; j < spliceArray.length; j++){
-        if(request[i].name === spliceArray[j]){
-          request.splice(i,1);
+      for (j = 0; j < spliceArray.length; j++) {
+        if (request[i].name === spliceArray[j]) {
+          request.splice(i, 1);
         }
       }
       $("#currentprojects").append(`

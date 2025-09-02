@@ -1,18 +1,18 @@
-function loadRepos(targetId, skipList = [], withImages = false){
-    const requestURL = "https://api.github.com/users/elibessen/repos";
+function loadRepos(targetId, skipList = [], withImages = false) {
+  const requestURL = "https://api.github.com/users/elibessen/repos";
 
-    $.get(requestURL, function () {}).done(function() {
-        const repos = arguments[0];
+  $.get(requestURL, function () {}).done(function () {
+    const repos = arguments[0];
 
-        for (let i=0; i < repos.length; i++){
-            if (skipList.includes(repos[i].name)) continue;
+    for (let i = 0; i < repos.length; i++) {
+      if (skipList.includes(repos[i].name)) continue;
 
-            let imgTag = "";
-            if (withImages) {
-                imgTag = `<img src='img/projects/${repos[i].name}.png' />`;
-            }
+      let imgTag = "";
+      if (withImages) {
+        imgTag = `<img src='img/projects/${repos[i].name}.png' />`;
+      }
 
-            $(`#${targetId}`).append(`
+      $(`#${targetId}`).append(`
                 <a class="card" href="https://github.com/elibessen/${repos[i].name}" target="_blank">
                     ${imgTag}
                     <h3>${repos[i].name}</h3>
@@ -24,7 +24,7 @@ function loadRepos(targetId, skipList = [], withImages = false){
                     </div>
                 </a>
                 `);
-            }
-            initCardAnimations(document.getElementById(targetId)); 
-    })
+    }
+    initCardAnimations(document.getElementById(targetId));
+  });
 }

@@ -13,8 +13,8 @@ function initCardAnimations(container) {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.15 },
   );
 
-  cards.forEach(card => observer.observe(card));
+  cards.forEach((card) => observer.observe(card));
 }

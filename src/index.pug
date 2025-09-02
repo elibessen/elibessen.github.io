@@ -1,0 +1,218 @@
+doctype html
+head
+  title Eli Bessen - Computer Science Student &amp; Developer
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='main.css')
+  script(src='https://unpkg.com/boxicons@2.1.2/dist/boxicons.js')
+  script(src='https://code.jquery.com/jquery-3.6.1.min.js' integrity='sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=' crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+  script(src='js/load-repos.js')
+  link(rel='icon' type='image/x-icon' href='img/favicon.png')
+#scroll-progress
+#intro-screen
+  #intro-content
+    span.wave-emoji &#x1F44B;
+    span.intro-text Hello!
+#page.hidden
+  #content
+    nav.navbar
+      .nav-container
+        a.nav-brand(href='index.html')
+          p Eli
+          p.highlight Bessen
+        button.hamburger(aria-label='Toggle menu' aria-expanded='false' aria-controls='nav-menu')
+          span
+          span
+          span
+        #nav-menu.nav-menu
+          ul.nav-links
+            li
+              a(href='#') Home
+            li
+              a(href='#projectcontainer') Projects
+          ul.nav-socials
+            li
+              a(href='https://au.linkedin.com/in/eli-bessen-586652337' target='_blank' rel='noopener')
+                img(src='./img/linkedin.svg' alt='LinkedIn')
+            li
+              a(href='https://github.com/elibessen' target='_blank' rel='noopener')
+                img(src='./img/github.svg' alt='GitHub')
+          li.theme-switch-wrapper
+            label.theme-switch
+              input#theme-toggle(type='checkbox')
+              span.slider
+                span.sun &#x2600;&#xFE0F;
+                span.moon &#x1F319;
+    #titlecontainer
+      #title
+        h1.title-static Australian
+        h1#typewriter-line
+          span#typewriter.text-gradient
+          span.cursor |
+        p
+          | I&apos;m a Computer Science student at
+          a(href='https://adelaideuni.edu.au' target='_blank') Adelaide University
+          | .
+    #bottomcontainer
+      #colorcontainer
+        #aboutcontainer
+          div(style='width: 50vw')
+            div
+              p Who am I?
+              #about-title
+                img#profile-pic(src='img/me.jpg' alt='Me!')
+                h1 Hey, I&apos;m Eli!
+              h3
+              h3
+                | I&apos;m a Computer Science student majoring in Artifical
+                | Intelligence at Adelaide University and working in the
+                | Technology Team at
+                a(href='https://www.sarahgroup.com.au/' target='_blank') Sarah Group
+                | .
+              // <h5>I&apos;m a free lance developer looking to develop new and exciting applications.</h5>
+            #specialties
+              a(href='https://firebase.google.com/' target='_blank')
+                img(src='./img/firebase.svg')
+              a(href='https://reactjs.org/' target='_blank')
+                img(src='./img/react.svg')
+              a(href='https://www.javascript.com/')
+                img(src='./img/js.svg' target='_blank')
+              a(href='https://www.typescriptlang.org/' target='_blank')
+                img(src='./img/typescript.svg')
+              a(href='https://www.python.org/' target='_blank')
+                img(src='./img/python.svg')
+              a(href='https://sass-lang.com/' target='_blank')
+                img(src='./img/sass.svg')
+      #specialtiescontainers
+        .parent
+          #child1.children
+            img(src='./img/layers.svg')
+            h3 Software Development
+            p
+              | I enjoy building efficient, user-focused and intelligent
+              | applications across the full stack.
+            p(style='margin: 0.5rem; color: #00c7f8') Languages I use:
+            #devtools
+              p(style='margin-top: 0rem') HTML
+              p JavaScript/Typescript
+              p CSS
+              p SCSS/Sass
+              p Pug
+              p Python
+              p C++
+              p PHP
+              p SQL
+              p MATLAB
+              p R
+          #child2.children
+            img(src='./img/hard-drive.svg')
+            h3 Tooling and Infrastructure
+            p
+              | I&rsquo;m familiar with modern frameworks and development
+              | infrastructure that support scalable software delivery.
+            p(style='margin: 0.5rem; color: #00c7f8') Technologies I use:
+            #devtools
+              a(style='margin-top: 0rem' href='https://nextjs.org/') Next.js
+              a(href='https://react.dev/' target='_blank') React
+              a(href='https://expressjs.com/' target='_blank') Express
+              a(href='https://jquery.com/' target='_blank') jQuery
+              a(href='https://getbootstrap.com/' target='_blank') Bootstrap
+              a(href='https://ubuntu.com/wsl' target='_blank') WSL
+              a(href='https://git-scm.com/' target='_blank') Git
+              a(href='https://www.docker.com/' target='_blank') Docker
+              a(href='https://firebase.google.com/' target='_blank') Firebase
+          .children
+            img(src='./img/terminal.svg')
+            h3 Artificial Intelligence
+            p
+              | I am currently learning to design, train, and optimize machine
+              | learning models and neural networks, focusing on practical
+              | applications and foundational theory.
+            p(style='margin: 0.5rem; color: #00c7f8') Areas of interest:
+            #devtools
+              p(style='margin-top: 0rem')
+                | Supervised &amp; Unsupervised Learning
+              p Neural Networks
+              p Data Processing
+              p Model Evaluation &amp; Tuning
+      section#timeline-section
+        #timeline-header
+          h1 My Timeline
+          p
+            | This timeline highlights key milestones in my programming journey
+            | and career progression.
+        .timeline
+          #timeline-line.timeline-line
+          .timeline-container
+            .timeline-item.left(data-date='2018–2022')
+              h3 Built Programming Foundations
+              p
+                | I began learning the basics of programming through school
+                | classes in 2018, then advanced rapidly through more complex
+                | coursework from 2019-2022, consistently achieving strong
+                | results.
+            .timeline-item.right(data-date='2022')
+              h3 High School Graduation
+              p
+                | Graduated with an ATAR score of 84, marking a successful
+                | completion of secondary education. Completing Specialist
+                | Mathematics, Physics, Digital Technologies and English
+                | Literary Studies.
+            .timeline-item.left(data-date='2024-Present')
+              img#adelaide_uni.company-logo(src='img/companies/adelaide_uni.png' alt='Sarah Group Holdings Logo')
+              h3(style='margin-top: 0.3rem')
+                | Commenced Bachelor of Computer Science (AI Major)
+              p(style='margin-bottom: 5px')
+                | Enrolled at the University of Adelaide (Now known as Adelaide
+                | University) to pursue a Bachelor&rsquo;s degree in Computer Science,
+                | with a major in Artifical Intelligence. Currently achieving a
+                | GPA of 6.143*
+              p(style='\
+              color: rgb(227, 227, 227);\
+              font-size: 8px;\
+              margin-top: 0;\
+              ')
+                | *subject to change
+            .timeline-item.right(data-date='November 2024-Present')
+              img#sarah_group.company-logo(src='img/companies/sarah_group.png' alt='Sarah Group Holdings Logo')
+              h3(style='margin-top: 0.3rem') Technology Administrator
+              p
+                | Employed at Sarah Group, working in the Technology Team
+                | providing support and administration, gaining valuable
+                | experience in a corporate environment.
+              p
+                | Developing practical skills in troubleshooting, user support,
+                | account management, systems maintenance, and exposure to IT
+                | practices.
+      #currentprojectcontainer
+        p What am I working on?
+        h1 My Projects.
+        #currentprojects.autogrid
+      #projectcontainer
+        p What have I worked on?
+        h1 My Repositories.
+        #allprojects.autogrid
+      #footercontainer
+        #footer
+          footer.footer
+            .footer-content
+              p(style='font-size: large;') Got a website or app in mind?
+              h3 Let&apos;s work together!
+              a.emaillink(href='mailto:eli.bessen04@gmail.com')
+                span.emoji &#x1F4E7;
+                h4 Contact me!
+              p(style='padding-bottom: 1rem;')
+                | &copy; 2024-2025 All rights reserved - Front-end developer.
+                | Hand designed and coded by
+                a(href='https://github.com/elibessen' target='_blank') Eli Bessen
+                |                   with &#x1F90D;.
+              // <p style="padding-top: 40rem">Hi :)</p>
+script.
+  loadRepos("currentprojects", ["elibessen", "elibessen.github.io"], true);
+  loadRepos("allprojects", ["elibessen"]);
+script(src='js/background-toggle.js')
+script(src='js/card-toggle.js')
+script(src='js/timeline.js')
+script(src='js/intro-page.js')
+script(src='js/title-page.js')

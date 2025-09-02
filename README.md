@@ -5,6 +5,7 @@ View it at: [elibessen.com](https://elibessen.com/)
 
 ## Technologies
 - HTML
+- Pug (For readability)
 - SCSS (Sass)
 - JavaScript (ES6+)
 - Prettier (Code Formatting)
@@ -67,6 +68,7 @@ View it at: [elibessen.com](https://elibessen.com/)
 | Add job and education timeline        | ✅ Done   | Includes pulsing icons, key events                               |
 | Improve About section visuals         | ✅ Done   | Profile picture with animation, layout tweaks                    |
 | Add 404 page                          | ✅ Done  | Provide fallback for broken routes                                |
+| Add Pug -> HTML                       | ✅ Done  | Provides better readability for Markdown files                    |
 
 ---
 
@@ -88,4 +90,5 @@ View it at: [elibessen.com](https://elibessen.com/)
 
 
 ## License
+
 This project is licensed under the [MIT](https://github.com/elibessen/elibessen.github.io/blob/main/LICENSE) license.

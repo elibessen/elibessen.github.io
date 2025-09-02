@@ -54,8 +54,8 @@
 
 .emaillink:hover {
   background: linear-gradient(90deg, #0078D4, #00c7f8);
-  animation: pulseGlow 1.5s infinite ease-in-out;
   cursor: pointer;
+  animation: pulseGlow 2s infinite ease-in-out;
 }
 
 /* Glow pulse instead of scale */
@@ -74,7 +74,17 @@
     font-weight: 700;
     margin: 1rem;
     padding: 0;
+    animation: textPulse 4.5  s infinite ease-in-out;
   }
+
+  @keyframes textPulse {
+  0%, 100% {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
 
   h5 {
     color: grey;

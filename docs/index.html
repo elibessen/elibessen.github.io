@@ -12,8 +12,7 @@
     crossorigin="anonymous"
   ></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="js/list-repos.js"></script>
-  <script src="js/build-repos.js"></script>
+  <script src="js/load-repos.js"></script>
   <link rel="icon" type="image/x-icon" href="img/favicon.png" />
 </head>
 <body>
@@ -300,7 +299,7 @@
                   ><span class="emoji">📧</span>
                   <h4>Contact me!</h4></a
                 >
-                <p style="padding-bottom: 2rem">
+                <p style="padding-bottom: 1rem;">
                   &copy; 2024-2025 All rights reserved - Front-end developer.
                   Hand designed and coded by
                   <a href="https://github.com/elibessen" target="_blank"
@@ -308,7 +307,7 @@
                   >
                   with 🤍.
                 </p>
-                <p style="padding-top: 40rem">Hi :)</p>
+                <!-- <p style="padding-top: 40rem">Hi :)</p> -->
               </div>
             </footer>
           </div>
@@ -317,10 +316,11 @@
     </div>
   </div>
   <script>
-    generateRepos();
-    buildRepos();
+    loadRepos("currentprojects", ["elibessen", "elibessen.github.io"], true);
+    loadRepos("allprojects", ["elibessen"]);
   </script>
   <script src="js/background-toggle.js"></script>
+  <script src="js/card-toggle.js"></script>
   <script src="js/timeline.js"></script>
   <script src="js/intro-page.js"></script>
   <script src="js/title-page.js"></script>

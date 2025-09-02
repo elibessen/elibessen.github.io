@@ -505,6 +505,17 @@ body.dark-mode .text-gradient {
     font-size: 3.5rem;
   }
 }
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #currentprojectcontainer {
   text-align: center;
   margin-top: 20rem;
@@ -521,7 +532,7 @@ body.dark-mode .text-gradient {
 .footer {
   position: relative;
   width: 100%;
-  padding-top: 40rem;
+  padding-top: 45rem;
   color: #fff;
   background-color: transparent;
 }
@@ -530,12 +541,14 @@ body.dark-mode .footer {
 }
 
 .footer-content {
-  padding-top: 5rem;
+  padding-top: 0em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  /* emoji flies off */
+  /* Glow pulse instead of scale */
 }
 .footer-content .emaillink {
   display: inline-flex;
@@ -546,12 +559,12 @@ body.dark-mode .footer {
   font-weight: 700;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
   font-family: "Arial", sans-serif;
   gap: 0.5rem;
   overflow: hidden;
-  margin-bottom: 7em;
+  transition: background 0.3s ease;
   margin-top: 2rem;
+  margin-bottom: 40rem;
 }
 .footer-content .emaillink h4 {
   margin: 0;
@@ -562,13 +575,21 @@ body.dark-mode .footer {
   transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.8s ease;
 }
 .footer-content .emaillink:hover .emoji {
-  transform: translateX(150px); /* move to the right */
+  transform: translateX(150px);
   opacity: 0;
 }
 .footer-content .emaillink:hover {
   background: linear-gradient(90deg, #0078D4, #00c7f8);
-  transform: scale(1.05);
+  animation: pulseGlow 1.5s infinite ease-in-out;
   cursor: pointer;
+}
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 199, 248, 0.9);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(0, 199, 248, 0.5);
+  }
 }
 .footer-content h3 {
   font-size: 3rem;

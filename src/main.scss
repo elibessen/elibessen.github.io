@@ -1,18 +1,18 @@
 // sass --watch ./src/main.scss ./docs/main.css
 
-@use "components/navbar";
-@use "components/buttons";
-@use "components/title";
-@use "components/contact";
-@use "components/projects";
-@use "components/currentProject";
-@use "components/footer";
-@use "components/about";
-@use "components/work";
-@use "components/specialties";
-@use "components/timeline";
-@use "components/scrollprogress";
-@use "components/introPage";
+@import "components/navbar.scss";
+@import "components/buttons.scss";
+@import "components/title.scss";
+@import "components/contact.scss";
+@import "components/projects.scss";
+@import "components/currentProject.scss";
+@import "components/footer.scss";
+@import "components/about.scss";
+@import "components/work.scss";
+@import "components/specialties.scss";
+@import "components/timeline.scss";
+@import "components/scrollprogress.scss";
+@import "components/introPage.scss";
 
 html,
 body {

@@ -15,6 +15,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       margin: 0;
       text-align: center;
     }
+
     p {
       padding: 0;
       text-align: center;
@@ -27,8 +28,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   padding: 60px 0;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 60px; // space for sticky navbar
+  margin: 60px auto 0;
   z-index: -1000;
 
   .timeline-line {
@@ -79,7 +79,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     .timeline-header {
       width: 90%;
       max-width: 600px;
-      margin: 0 auto 60px auto;
+      margin: 0 auto 60px;
       text-align: center;
       color: $timeline-color;
 
@@ -90,7 +90,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 
       p {
         font-size: 1rem;
-        color: color.adjust($timeline-color, $lightness: -20%);
+        color: darken($timeline-color, 20%);
         line-height: 1.4;
       }
     }
@@ -104,19 +104,44 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
       box-shadow: $box-shadow;
       opacity: 0;
-      transition:
-        opacity 0.6s ease-out,
-        transform 0.6s ease-out;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
       z-index: 5;
+
+      /* -------- Read More Section -------- */
+
+      .responsibilities {
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        position: relative;
+      }
+
+      .read-more-btn {
+        margin-top: 8px;
+        padding: 0;
+        background: none;
+        border: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: $timeline-color;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      /* ----------------------------------- */
 
       img {
         height: 40px;
         width: auto;
         flex-shrink: 0;
       }
+
       #sarah_group {
         filter: invert(1);
       }
+
       #adelaide_uni {
         filter: invert(0);
       }
@@ -149,14 +174,9 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
     font-size: 14px;
     color: $timeline-color;
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
     z-index: 15;
     display: flex;
     align-items: center;
-    overflow: visible;
     pointer-events: none;
     white-space: nowrap;
 
@@ -182,16 +202,12 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 
     &.left {
       left: 50%;
-      transform: translateX(calc(0%));
+      transform: translateX(0);
       justify-content: flex-start;
       gap: 8px;
 
-      .line {
-        transform-origin: left center;
-
-        &::after {
-          right: 0; // tick mark on right end
-        }
+      .line::after {
+        right: 0;
       }
 
       &.visible .line {
@@ -205,12 +221,8 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       justify-content: flex-end;
       gap: 8px;
 
-      .line {
-        transform-origin: right center;
-
-        &::after {
-          left: 0; // tick mark on left end
-        }
+      .line::after {
+        left: 0;
       }
 
       &.visible .line {
@@ -226,7 +238,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       .timeline-item.right {
         width: 90%;
         left: 5% !important;
-        transform: translateX(0) !important;
+        transform: none !important;
       }
     }
 
@@ -256,11 +268,12 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   }
 }
 
+/* ---------------- DARK MODE ---------------- */
+
 body.dark-mode {
-  $dark-bg: #121212;
   $dark-color: #ffffff;
   $dark-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
-  $dark-timeline-color: #00a0cc; // slightly darker blue
+  $dark-timeline-color: #00a0cc;
 
   #timeline-section {
     color: $dark-color;
@@ -282,7 +295,6 @@ body.dark-mode {
       &::before,
       &::after {
         background: $dark-timeline-color;
-        box-shadow: 0 0 0 rgba($dark-timeline-color, 0.7);
       }
     }
 
@@ -291,7 +303,7 @@ body.dark-mode {
         color: $dark-timeline-color;
 
         p {
-          color: color.adjust($dark-timeline-color, $lightness: -40%);
+          color: darken($dark-timeline-color, 40%);
         }
       }
 
@@ -299,6 +311,10 @@ body.dark-mode {
         background: #1e1e1e;
         box-shadow: $dark-shadow;
         color: $dark-color;
+
+        .read-more-btn {
+          color: $dark-timeline-color;
+        }
 
         #adelaide_uni {
           filter: brightness(0) invert(1);
@@ -313,12 +329,9 @@ body.dark-mode {
     .timeline-date {
       color: $dark-timeline-color;
 
-      .line {
+      .line,
+      .line::after {
         background: $dark-timeline-color;
-
-        &::after {
-          background: $dark-timeline-color;
-        }
       }
     }
   }

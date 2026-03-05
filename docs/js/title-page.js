@@ -1,7 +1,7 @@
 const words = [
   "Computer Scientist.",
-  "Frontend Developer.",
   "IT Professional.",
+  "Frontend Developer.",
   "Web Developer.",
   "Software Engineer.",
   "Systems Thinker.",

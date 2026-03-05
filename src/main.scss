@@ -129,13 +129,11 @@ body.dark-mode {
     background: #777;
   }
 
-  // Override any light backgrounds in main layout containers if needed
   #page {
-    background-color: transparent; // or #121212 if page container has background
+    background-color: transparent;
   }
 
   #bottomcontainer {
-    // if you want consistent bg color on padding area
     background-color: transparent;
   }
 }

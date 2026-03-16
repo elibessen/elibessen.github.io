@@ -142,6 +142,10 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         filter: invert(1);
       }
 
+      #sace {
+        filter: brightness(0.75) invert(0);
+      }
+
       #adelaide_uni {
         filter: invert(0);
       }
@@ -318,6 +322,10 @@ body.dark-mode {
 
         #adelaide_uni {
           filter: brightness(0) invert(1);
+        }
+
+        #sace{
+          filter: brightness(1);
         }
 
         #sarah_group {

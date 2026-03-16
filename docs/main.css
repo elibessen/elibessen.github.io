@@ -820,6 +820,8 @@ body.dark-mode #specialtiescontainers #child2 {
         flex-shrink: 0; }
       .timeline .timeline-container .timeline-item #sarah_group {
         filter: invert(1); }
+      .timeline .timeline-container .timeline-item #sace {
+        filter: brightness(0.75) invert(0); }
       .timeline .timeline-container .timeline-item #adelaide_uni {
         filter: invert(0); }
       .timeline .timeline-container .timeline-item.left {
@@ -925,6 +927,8 @@ body.dark-mode .timeline {
       color: #00a0cc; }
     body.dark-mode .timeline .timeline-container .timeline-item #adelaide_uni {
       filter: brightness(0) invert(1); }
+    body.dark-mode .timeline .timeline-container .timeline-item #sace {
+      filter: brightness(1); }
     body.dark-mode .timeline .timeline-container .timeline-item #sarah_group {
       filter: invert(0); }
   body.dark-mode .timeline .timeline-date {

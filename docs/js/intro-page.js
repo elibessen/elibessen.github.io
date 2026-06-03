@@ -1,7 +1,7 @@
 setTimeout(() => {
   const intro = document.getElementById("intro-screen");
   if (intro) intro.style.display = "none";
-}, 4500);
+}, 2000);
 
 window.addEventListener("load", () => {
   const page = document.getElementById("page");

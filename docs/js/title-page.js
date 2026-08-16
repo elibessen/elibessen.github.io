@@ -1,11 +1,9 @@
 const words = [
   "IT Professional.",
   "Computer Scientist.",
-  "Web Developer.",
   "Technology Enthusiast.",
-  "Software Engineer.",
   "Systems Thinker.",
-  "Creative Coder."
+  "Creative Thinker."
 ];
 
 const typewriter = document.getElementById("typewriter");

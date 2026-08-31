@@ -215,14 +215,13 @@ body.dark-mode .hamburger span {
   color: #181e1a;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
+  align-items: flex-start;
+  padding-left: 3rem; }
   @media only screen and (max-width: 1121px) {
     #title {
       padding-top: 5rem;
-      padding-left: 0rem; } }
-  @media only screen and (min-width: 600px) {
-    #title {
-      padding-left: 3rem; } }
+      padding-left: 0rem;
+      margin-left: 0rem; } }
   #title .title-static,
   #title #typewriter-line {
     font-size: 6rem;
@@ -249,7 +248,8 @@ body.dark-mode .hamburger span {
         text-align: center;
         font-weight: 500;
         font-size: 1.4rem;
-        max-width: 90vw; } }
+        max-width: 90vw;
+        align-self: center; } }
     @media only screen and (max-width: 600px) {
       #title p {
         font-size: 1.2rem; } }

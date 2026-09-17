@@ -12,34 +12,37 @@ View it at: [elibessen.com](https://elibessen.com/)
 
 ## Features
 
-- 📱 **Responsive Design**  
+- **Responsive Design**  
   Adapts across desktop, tablet, and mobile using SCSS media queries.
 
-- 🌙 **Dark Mode Toggle**  
+- **Dark Mode Toggle**  
   Switch between light and dark themes with a custom toggle, powered by CSS variables and JavaScript.
 
-- ⌨️ **Typewriter Title Animation**  
+- ⌨**Typewriter Title Animation**  
   Title cycles through multiple phrases with a smooth typing effect.
 
-- 📊 **Scroll Progress Indicator**  
+- **Scroll Progress Indicator**  
   Horizontal progress bar at the top tracks scroll position.
 
-- 🎨 **Dynamic Background**  
+- **Dynamic Background**  
   Background color transitions based on scroll position near the footer.
 
-- 🧱 **Modular SCSS**  
+- **Starfield**
+  A dynamic starfield in the footer of the website.
+
+- **Modular SCSS**  
   Organized SCSS using nesting, variables, and reusable styles.
 
-- 🗓️ **Animated Timeline**  
+- **Animated Timeline**  
   Visualizes job and education milestones with icons and transitions.
 
-- 👤 **Animated Profile Section**  
+- **Animated Profile Section**  
   Pulsing profile image and styled About section layout.
 
-- 🍔 **Mobile Navigation**  
+- **Mobile Navigation**  
   Responsive hamburger menu with animated open/close state.
 
-- 🚀 **Optimized for GitHub Pages**  
+- **Optimized for GitHub Pages**  
   Compiled and deployed from the `/docs` folder for static hosting.
 
   Deployed from `/docs` folder and optimized for static hosting.

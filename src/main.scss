@@ -1,17 +1,12 @@
 // sass --watch ./src/main.scss:./docs/main.css
 
 @import "components/navbar.scss";
-@import "components/buttons.scss";
 @import "components/title.scss";
-@import "components/contact.scss";
 @import "components/projects.scss";
-@import "components/currentProject.scss";
 @import "components/footer.scss";
 @import "components/about.scss";
-@import "components/work.scss";
 @import "components/specialties.scss";
 @import "components/timeline.scss";
-@import "components/scrollprogress.scss";
 @import "components/introPage.scss";
 
 html,
@@ -43,22 +38,18 @@ body {
   opacity: 0;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -118,7 +109,6 @@ body.dark-mode {
   background-color: #121212;
   color: #ddd;
 
-  // Scrollbar for dark mode
   &::-webkit-scrollbar-track {
     background: #2a2a2a;
   }

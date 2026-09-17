@@ -1,11 +1,29 @@
+#footercontainer {
+  position: relative;
+  overflow: hidden;
+
+  #starfield {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
 .footer {
-  position: relative; // was absolute, change if needed
+  position: relative;
+  z-index: 1;
+
   width: 100%;
   padding-top: 45rem;
+
   color: #fff;
   background-color: transparent;
 
-  // Dark mode override
   body.dark-mode & {
     color: black;
   }
@@ -13,25 +31,35 @@
 
 .footer-content {
   padding-top: 0em;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
 
   .emaillink {
     display: inline-flex;
     align-items: center;
+
     text-decoration: none;
+
     background: linear-gradient(90deg, #00c7f8, #0078d4);
     color: #fff;
+
     font-weight: 700;
+
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
+
     font-family: "Arial", sans-serif;
+
     gap: 0.5rem;
     overflow: hidden;
+
     transition: background 0.3s ease;
+
     margin-top: 2rem;
     margin-bottom: 40rem;
   }
@@ -43,12 +71,12 @@
 
   .emoji {
     display: inline-block;
+
     transition:
       transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
       opacity 0.8s ease;
   }
 
-  /* emoji flies off */
   .emaillink:hover .emoji {
     transform: translateX(150px);
     opacity: 0;
@@ -60,12 +88,12 @@
     animation: pulseGlow 2s infinite ease-in-out;
   }
 
-  /* Glow pulse instead of scale */
   @keyframes pulseGlow {
     0%,
     100% {
       box-shadow: 0 0 0 0 rgba(0, 199, 248, 0.9);
     }
+
     50% {
       box-shadow: 0 0 12px 4px rgba(0, 199, 248, 0.5);
     }
@@ -74,8 +102,10 @@
   h3 {
     font-size: 3rem;
     font-weight: 700;
+
     margin: 1rem;
     padding: 0;
+
     animation: textPulse 4.5s infinite ease-in-out;
   }
 
@@ -84,6 +114,7 @@
     100% {
       text-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
     }
+
     50% {
       text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     }
@@ -91,8 +122,10 @@
 
   h5 {
     color: grey;
+
     max-width: 500px;
     font-size: 1rem;
+
     margin: 0;
     padding: 0;
 
@@ -103,8 +136,10 @@
 
   p {
     color: grey;
+
     max-width: 500px;
     font-size: 0.6rem;
+
     margin: 0;
     padding: 0;
 
@@ -112,4 +147,8 @@
       color: black;
     }
   }
+}
+
+.footer-content {
+  transition: transform 0.3s ease-out;
 }

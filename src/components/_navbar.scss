@@ -116,7 +116,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
@@ -164,7 +163,6 @@
     display: flex;
   }
 
-  /* Theme switch styling inside nav menu */
   .theme-switch-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -243,7 +241,6 @@
   }
 }
 
-/* Dark mode image inversion */
 body.dark-mode {
   .nav-menu ul img {
     filter: invert(1);
@@ -252,4 +249,16 @@ body.dark-mode {
   .hamburger span {
     background: var(--text-color);
   }
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: #4682b4;
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+  border: none;
 }

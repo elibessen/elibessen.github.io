@@ -6,7 +6,7 @@ const words = [
   "Technology Enthusiast.",
   "Systems Thinker.",
   "Creative Thinker.",
-  'Football Enthusiast.'
+  "Football Enthusiast.",
 ];
 
 const typewriter = document.getElementById("typewriter");

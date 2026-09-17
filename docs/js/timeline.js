@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateScrollProgress() {
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = (scrollTop / docHeight) * 100;
     if (scrollProgressBar) scrollProgressBar.style.width = scrollPercent + "%";
   }
@@ -18,7 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!date) return;
 
     const dateEl = document.createElement("div");
-    dateEl.classList.add("timeline-date", item.classList.contains("left") ? "left" : "right");
+    dateEl.classList.add(
+      "timeline-date",
+      item.classList.contains("left") ? "left" : "right",
+    );
 
     const line = document.createElement("span");
     line.classList.add("line");
@@ -47,7 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let progress = (scrollTop + viewportHeight - timelineTop) / timelineHeight;
     progress = Math.min(Math.max(progress, 0), 1);
-    if (timelineLine) timelineLine.style.height = progress * timelineHeight + "px";
+    if (timelineLine)
+      timelineLine.style.height = progress * timelineHeight + "px";
 
     items.forEach((item) => {
       const rect = item.getBoundingClientRect();
@@ -66,7 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const itemCenter = rect.top + scrollTop + rect.height / 2;
       const timelineTopScroll = timelineRect.top + scrollTop;
-      const topPosition = itemCenter - timelineTopScroll - dateEl.offsetHeight / 2;
+      const topPosition =
+        itemCenter - timelineTopScroll - dateEl.offsetHeight / 2;
       dateEl.style.top = topPosition + "px";
     });
   }

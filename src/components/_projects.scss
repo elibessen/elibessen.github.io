@@ -105,7 +105,19 @@
   }
 }
 
-/* Responsive Styles */
+#currentprojectcontainer {
+  text-align: center;
+  margin-top: 20rem;
+  h1 {
+    font-size: 4.5rem;
+    margin: 0;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 @media only screen and (max-width: 1121px) {
   #projectcontainer,
   #currentprojectscontainer {

@@ -3,7 +3,7 @@ function loadRepos(targetId, skipList = [], withImages = false) {
 
   $.get(requestURL, function () {}).done(function () {
     const repos = arguments[0];
-    console.log(repos)
+    console.log(repos);
 
     for (let i = 0; i < repos.length; i++) {
       if (skipList.includes(repos[i].name)) continue;
@@ -12,7 +12,7 @@ function loadRepos(targetId, skipList = [], withImages = false) {
       if (withImages) {
         imgTag = `<img src='img/projects/${repos[i].name}.png' />`;
       }
-      
+
       const date = new Date(repos[i].pushed_at);
       const dateOnly = `${String(date.getDate()).padStart(2, "0")}-${String(date.getMonth() + 1).padStart(2, "0")}-${date.getFullYear()}`;
 

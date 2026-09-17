@@ -104,7 +104,9 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
       box-shadow: $box-shadow;
       opacity: 0;
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
       z-index: 5;
 
       img {
@@ -125,7 +127,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         filter: invert(0);
       }
 
-      #fleet{
+      #fleet {
         filter: invert(0);
       }
 
@@ -251,7 +253,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   }
 }
 
-/* ---------------- DARK MODE ---------------- */
+// Dark mode
 
 body.dark-mode {
   $dark-color: #ffffff;
@@ -303,7 +305,7 @@ body.dark-mode {
           filter: brightness(0) invert(1);
         }
 
-        #sace{
+        #sace {
           filter: brightness(1);
         }
 

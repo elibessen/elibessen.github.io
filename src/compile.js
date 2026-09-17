@@ -4,7 +4,6 @@ const fs = require("fs");
 // List of Pug files to compile
 const files = ["index", "404"];
 
-
 files.forEach((file) => {
   // Compile Pug to HTML string
   const html = pug.renderFile(`src/${file}.pug`, { pretty: true });

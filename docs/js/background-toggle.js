@@ -63,10 +63,10 @@ function setTheme(darkMode) {
     toggle.checked = false;
   }
   localStorage.setItem("darkMode", darkMode);
-  updateBackground(); // Immediately update background on theme change
+  updateBackground();
 }
 
-// Load saved theme or default to system preference
+// Load saved theme or default to system
 const storedTheme = localStorage.getItem("darkMode");
 if (storedTheme !== null) {
   setTheme(storedTheme === "true");

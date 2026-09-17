@@ -29,7 +29,7 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   padding: 60px 0;
   max-width: 1200px;
   margin: 60px auto 0;
-  z-index: -1000;
+  z-index: 0;
 
   .timeline-line {
     position: absolute;
@@ -107,31 +107,6 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
       z-index: 5;
 
-      /* -------- Read More Section -------- */
-
-      .responsibilities {
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-        position: relative;
-      }
-
-      .read-more-btn {
-        margin-top: 8px;
-        padding: 0;
-        background: none;
-        border: none;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: $timeline-color;
-        cursor: pointer;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      /* ----------------------------------- */
-
       img {
         height: 40px;
         width: auto;
@@ -147,6 +122,10 @@ $box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       }
 
       #adelaide_uni {
+        filter: invert(0);
+      }
+
+      #fleet{
         filter: invert(0);
       }
 
@@ -330,6 +309,10 @@ body.dark-mode {
 
         #sarah_group {
           filter: invert(0);
+        }
+
+        #fleet {
+          filter: invert(1);
         }
       }
     }

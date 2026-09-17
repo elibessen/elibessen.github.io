@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = Array.from(document.querySelectorAll(".timeline-item"));
   const scrollProgressBar = document.getElementById("scroll-progress");
 
-  // ---------- Scroll Progress ----------
   function updateScrollProgress() {
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateScrollProgress);
   updateScrollProgress();
 
-  // ---------- Timeline Dates ----------
   items.forEach((item) => {
     const date = item.getAttribute("data-date");
     if (!date) return;
@@ -40,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     item._dateEl = dateEl;
   });
 
-  // ---------- Timeline Update ----------
   function updateTimeline() {
     const scrollTop = window.scrollY;
     const viewportHeight = window.innerHeight;

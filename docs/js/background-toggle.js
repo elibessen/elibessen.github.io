@@ -11,8 +11,8 @@ function updateBackground() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 
-  const fadeStart = windowHeight + 50;
-  const fadeEnd = fadeStart - 400;
+  const fadeStart = windowHeight + 10;
+  const fadeEnd = fadeStart - 500;
   const distanceToFooter = footerRect.top;
 
   const isDarkMode = changedSection.classList.contains("dark-mode");

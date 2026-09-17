@@ -734,7 +734,7 @@ body.dark-mode #specialtiescontainers #child2 {
   padding: 60px 0;
   max-width: 1200px;
   margin: 60px auto 0;
-  z-index: -1000; }
+  z-index: 0; }
   .timeline .timeline-line {
     position: absolute;
     left: 50%;
@@ -796,24 +796,7 @@ body.dark-mode #specialtiescontainers #child2 {
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       opacity: 0;
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      z-index: 5;
-      /* -------- Read More Section -------- */
-      /* ----------------------------------- */ }
-      .timeline .timeline-container .timeline-item .responsibilities {
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-        position: relative; }
-      .timeline .timeline-container .timeline-item .read-more-btn {
-        margin-top: 8px;
-        padding: 0;
-        background: none;
-        border: none;
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #00c7f8;
-        cursor: pointer; }
-        .timeline .timeline-container .timeline-item .read-more-btn:hover {
-          text-decoration: underline; }
+      z-index: 5; }
       .timeline .timeline-container .timeline-item img {
         height: 40px;
         width: auto;
@@ -823,6 +806,8 @@ body.dark-mode #specialtiescontainers #child2 {
       .timeline .timeline-container .timeline-item #sace {
         filter: brightness(0.75) invert(0); }
       .timeline .timeline-container .timeline-item #adelaide_uni {
+        filter: invert(0); }
+      .timeline .timeline-container .timeline-item #fleet {
         filter: invert(0); }
       .timeline .timeline-container .timeline-item.left {
         left: 0;
@@ -931,6 +916,8 @@ body.dark-mode .timeline {
       filter: brightness(1); }
     body.dark-mode .timeline .timeline-container .timeline-item #sarah_group {
       filter: invert(0); }
+    body.dark-mode .timeline .timeline-container .timeline-item #fleet {
+      filter: invert(1); }
   body.dark-mode .timeline .timeline-date {
     color: #00a0cc; }
     body.dark-mode .timeline .timeline-date .line,

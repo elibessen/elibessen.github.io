@@ -1,11 +1,12 @@
 const words = [
   "IT Professional.",
-  "Systems Administrator.",
   "Technical Support.",
   "Computer Scientist.",
+  "Support Specialist.",
   "Technology Enthusiast.",
   "Systems Thinker.",
-  "Creative Thinker."
+  "Creative Thinker.",
+  'Football Enthusiast.'
 ];
 
 const typewriter = document.getElementById("typewriter");
@@ -39,7 +40,7 @@ function step(timestamp) {
   typewriter.textContent = currentWord.substring(0, charIndex);
 
   if (!isDeleting && charIndex === currentWord.length) {
-    pauseUntil = timestamp + 1800; // pause before deleting
+    pauseUntil = timestamp + 1900; // pause before deleting
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;

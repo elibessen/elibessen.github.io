@@ -18,7 +18,7 @@ if (canvas) {
   const SHOOTING_STAR_MIN_TIME = 5000;
   const SHOOTING_STAR_MAX_TIME = 7500;
 
-  // Chance for a normal star to become a bright star
+  // Chance for bright star
   const BRIGHT_STAR_CHANCE = 0.000025;
 
   let changeTimer = 0;
@@ -35,8 +35,6 @@ if (canvas) {
     targetY: -1000,
     active: false,
   };
-
-  // Track whether the footer is visible
   let footerVisible = false;
 
   // Resize the canvas to match the footer
@@ -57,7 +55,6 @@ if (canvas) {
 
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    // Only create stars the first time
     if (stars.length === 0) {
       createInitialStars();
     }
@@ -78,8 +75,7 @@ if (canvas) {
     return {
       x: x,
       y: y,
-
-      // Slow natural movement
+      
       driftX: (Math.random() - 0.5) * 0.008,
       driftY: (Math.random() - 0.5) * 0.008,
 
@@ -191,7 +187,6 @@ if (canvas) {
 
       const tailY = star.y - Math.sin(angle) * star.length;
 
-      // Create the shooting star tail
       const gradient = ctx.createLinearGradient(tailX, tailY, star.x, star.y);
 
       gradient.addColorStop(0, `rgba(${colour}, 0)`);
@@ -226,19 +221,16 @@ if (canvas) {
     mouse.active = true;
   });
 
-  // Disable mouse interaction when leaving the footer
   footer.addEventListener("mouseleave", () => {
     mouse.active = false;
     mouse.targetX = -1000;
     mouse.targetY = -1000;
   });
 
-  // Smoothly move a value towards a target
   function lerp(current, target, amount) {
     return current + (target - current) * amount;
   }
 
-  // Add a new star
   function addStar() {
     if (stars.length < MAX_STARS) {
       const star = createStar(
@@ -262,7 +254,6 @@ if (canvas) {
     }
   }
 
-  // Slowly change the number of stars
   function changeStars(deltaTime) {
     changeTimer += deltaTime;
 
@@ -277,7 +268,6 @@ if (canvas) {
     }
   }
 
-  // Occasionally make a star become very bright
   function updateBrightStars(star, deltaTime) {
     if (!star.bright && Math.random() < BRIGHT_STAR_CHANCE) {
       star.bright = true;
@@ -316,7 +306,6 @@ if (canvas) {
   const footerMaxMove = 15;
   let footerAnimation;
 
-  // Move footer elements away from the mouse
   footer.addEventListener("mousemove", (event) => {
     footerData.forEach((data) => {
       const rect = data.element.getBoundingClientRect();
@@ -344,7 +333,6 @@ if (canvas) {
     }
   });
 
-  // Return footer elements to their original positions
   footer.addEventListener("mouseleave", () => {
     footerData.forEach((data) => {
       data.targetX = 0;
@@ -395,10 +383,8 @@ if (canvas) {
 
     // Smoothly move the mouse position
     mouse.x = lerp(mouse.x, mouse.targetX, 0.12);
-
     mouse.y = lerp(mouse.y, mouse.targetY, 0.12);
 
-    // Change star colour based on dark mode
     let colour;
 
     if (document.body.classList.contains("dark-mode")) {
@@ -574,13 +560,11 @@ if (canvas) {
       }
     }
 
-    // Draw shooting stars after normal stars
     drawShootingStars();
 
     animationFrame = requestAnimationFrame(draw);
   }
 
-  // Start the animation
   function startAnimation() {
     if (!animationFrame && footerVisible && !document.hidden) {
       lastTime = performance.now();
@@ -589,7 +573,6 @@ if (canvas) {
     }
   }
 
-  // Stop the animation
   function stopAnimation() {
     if (animationFrame) {
       cancelAnimationFrame(animationFrame);
@@ -597,7 +580,6 @@ if (canvas) {
     }
   }
 
-  // Stop animation if footer isn't in view
   const footerObserver = new IntersectionObserver((entries) => {
     const entry = entries[0];
 
@@ -612,10 +594,8 @@ if (canvas) {
 
   footerObserver.observe(footer);
 
-  // Resize the canvas when the window changes size
   window.addEventListener("resize", resizeCanvas);
 
-  // Pause the animation when the tab is hidden
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       stopAnimation();
@@ -624,6 +604,5 @@ if (canvas) {
     }
   });
 
-  // Start
   resizeCanvas();
 }

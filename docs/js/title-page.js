@@ -1,6 +1,5 @@
 const words = [
   "IT Professional.",
-  "Technical Support.",
   "Computer Scientist.",
   "Support Specialist.",
   "Technology Enthusiast.",

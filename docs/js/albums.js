@@ -1,14 +1,14 @@
 const albums = [
     { title: "Go Farther in Lightness", artist: "Gang of Youths", ranking: 1 },
     { title: "Ants From Up There", artist: "Black Country, New Road", ranking: 2 },
-    { title: "Death in the Business of Whaling", artist: "Searows", ranking: 3 },
-    { title: "Pilgrim's Paradise", artist: "Daniel Caesar", ranking: 4 },
-    { title: "Titanic Rising", artist: "Weyes Blood", ranking: 5 }
+    { title: "Titanic Rising", artist: "Weyes Blood", ranking: 3 },
+    { title: "Death in the Business of Whaling", artist: "Searows", ranking: 4 },
+    { title: "3D Country", artist: "Geese", ranking: 5 },
 ];
 
 const nextAlbums = [
-    { title: "3D Country", artist: "Geese", ranking: 6 },
-    { title: "Imaginal Disk", artist: "Magdalena Bay", ranking: 7 },
+    { title: "Imaginal Disk", artist: "Magdalena Bay", ranking: 6 },
+    { title: "Pilgrim's Paradise", artist: "Daniel Caesar", ranking: 7 },
     { title: "Blonde", artist: "Frank Ocean", ranking: 8 },
     { title: "Bewitched: The Goddess Edition", artist: "Laufey", ranking: 9 },
     { title: "Racing Mount Pleasant", artist: "Racing Mount Pleasant", ranking: 10 }

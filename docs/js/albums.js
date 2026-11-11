@@ -8,10 +8,10 @@ const albums = [
 
 const nextAlbums = [
     { title: "Imaginal Disk", artist: "Magdalena Bay", ranking: 6 },
-    { title: "Pilgrim's Paradise", artist: "Daniel Caesar", ranking: 7 },
-    { title: "Blonde", artist: "Frank Ocean", ranking: 8 },
-    { title: "Bewitched: The Goddess Edition", artist: "Laufey", ranking: 9 },
-    { title: "Racing Mount Pleasant", artist: "Racing Mount Pleasant", ranking: 10 }
+    { title: "Double Infinity", artist: "Big Thief", ranking: 7 },
+    { title: "Racing Mount Pleasant", artist: "Racing Mount Pleasant", ranking: 8 },
+    { title: "Blonde", artist: "Frank Ocean", ranking: 9 },
+    { title: "Bewitched: The Goddess Edition", artist: "Laufey", ranking: 10 },
 ];
 
 function normaliseText(value) {

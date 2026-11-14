@@ -2,16 +2,16 @@ const albums = [
     { title: "Go Farther in Lightness", artist: "Gang of Youths", ranking: 1 },
     { title: "Ants From Up There", artist: "Black Country, New Road", ranking: 2 },
     { title: "Titanic Rising", artist: "Weyes Blood", ranking: 3 },
-    { title: "Death in the Business of Whaling", artist: "Searows", ranking: 4 },
+    { title: "Racing Mount Pleasant", artist: "Racing Mount Pleasant", ranking: 4 },
     { title: "3D Country", artist: "Geese", ranking: 5 },
 ];
 
 const nextAlbums = [
     { title: "Imaginal Disk", artist: "Magdalena Bay", ranking: 6 },
     { title: "Double Infinity", artist: "Big Thief", ranking: 7 },
-    { title: "Racing Mount Pleasant", artist: "Racing Mount Pleasant", ranking: 8 },
+    { title: "Death in the Business of Whaling", artist: "Searows", ranking: 8 },
     { title: "Blonde", artist: "Frank Ocean", ranking: 9 },
-    { title: "Bewitched: The Goddess Edition", artist: "Laufey", ranking: 10 },
+    { title: "Bewitched", artist: "Laufey", ranking: 10 },
 ];
 
 function normaliseText(value) {

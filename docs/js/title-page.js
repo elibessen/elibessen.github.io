@@ -1,9 +1,9 @@
 const words = [
   "IT Professional.",
   "Computer Scientist.",
+  "Systems Thinker.",
   "Support Specialist.",
   "Technology Enthusiast.",
-  "Systems Thinker.",
   "Creative Thinker.",
   "Football Enthusiast.",
 ];
